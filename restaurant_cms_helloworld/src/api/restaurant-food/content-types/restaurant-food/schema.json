@@ -46,6 +46,11 @@
       "relation": "manyToMany",
       "target": "api::restaurant-food-tag.restaurant-food-tag",
       "inversedBy": "restaurant_foods"
+    },
+    "position": {
+      "type": "integer",
+      "default": 1,
+      "required": true
     }
   }
 }
