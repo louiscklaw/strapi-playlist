@@ -15,7 +15,7 @@
     "name": {
       "type": "string"
     },
-    "restaurant_avatars": {
+    "avatars": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -80,6 +80,12 @@
     },
     "remarks": {
       "type": "text"
+    },
+    "settings": {
+      "type": "json"
+    },
+    "openSchedule": {
+      "type": "json"
     }
   }
 }
