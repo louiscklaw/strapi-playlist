@@ -6,7 +6,7 @@
       "bulkable": true,
       "filterable": true,
       "searchable": true,
-      "pageSize": 10,
+      "pageSize": 100,
       "mainField": "name",
       "defaultSortBy": "name",
       "defaultSortOrder": "ASC"
@@ -48,6 +48,21 @@
           "sortable": false
         }
       },
+      "restaurant_foods": {
+        "edit": {
+          "label": "restaurant_foods",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "restaurant_foods",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -84,7 +99,6 @@
         "createdAt",
         "updatedAt"
       ],
-      "editRelations": [],
       "edit": [
         [
           {
@@ -98,6 +112,9 @@
             "size": 12
           }
         ]
+      ],
+      "editRelations": [
+        "restaurant_foods"
       ]
     }
   },

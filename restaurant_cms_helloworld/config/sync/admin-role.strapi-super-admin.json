@@ -173,7 +173,8 @@
           "name",
           "description",
           "restaurant_foods",
-          "restaurant_menus"
+          "restaurant_menus",
+          "position"
         ]
       },
       "conditions": []
@@ -198,7 +199,8 @@
           "name",
           "description",
           "restaurant_foods",
-          "restaurant_menus"
+          "restaurant_menus",
+          "position"
         ]
       },
       "conditions": []
@@ -211,7 +213,8 @@
           "name",
           "description",
           "restaurant_foods",
-          "restaurant_menus"
+          "restaurant_menus",
+          "position"
         ]
       },
       "conditions": []
@@ -222,7 +225,8 @@
       "properties": {
         "fields": [
           "name",
-          "description"
+          "description",
+          "restaurant_foods"
         ]
       },
       "conditions": []
@@ -245,7 +249,8 @@
       "properties": {
         "fields": [
           "name",
-          "description"
+          "description",
+          "restaurant_foods"
         ]
       },
       "conditions": []
@@ -256,7 +261,8 @@
       "properties": {
         "fields": [
           "name",
-          "description"
+          "description",
+          "restaurant_foods"
         ]
       },
       "conditions": []
@@ -271,7 +277,9 @@
           "price",
           "images",
           "available",
-          "restaurant_food_categories"
+          "restaurant_food_categories",
+          "restaurant_food_tags",
+          "position"
         ]
       },
       "conditions": []
@@ -298,7 +306,9 @@
           "price",
           "images",
           "available",
-          "restaurant_food_categories"
+          "restaurant_food_categories",
+          "restaurant_food_tags",
+          "position"
         ]
       },
       "conditions": []
@@ -313,7 +323,9 @@
           "price",
           "images",
           "available",
-          "restaurant_food_categories"
+          "restaurant_food_categories",
+          "restaurant_food_tags",
+          "position"
         ]
       },
       "conditions": []
@@ -326,7 +338,8 @@
           "name",
           "description",
           "disabled",
-          "restaurant_food_categories"
+          "restaurant_food_categories",
+          "position"
         ]
       },
       "conditions": []
@@ -345,7 +358,8 @@
           "name",
           "description",
           "disabled",
-          "restaurant_food_categories"
+          "restaurant_food_categories",
+          "position"
         ]
       },
       "conditions": []
@@ -358,7 +372,8 @@
           "name",
           "description",
           "disabled",
-          "restaurant_food_categories"
+          "restaurant_food_categories",
+          "position"
         ]
       },
       "conditions": []
@@ -447,9 +462,11 @@
       "properties": {
         "fields": [
           "login",
-          "disabled",
           "password",
-          "restaurant"
+          "restaurant",
+          "confirmed",
+          "blocked",
+          "json"
         ]
       },
       "conditions": []
@@ -466,9 +483,11 @@
       "properties": {
         "fields": [
           "login",
-          "disabled",
           "password",
-          "restaurant"
+          "restaurant",
+          "confirmed",
+          "blocked",
+          "json"
         ]
       },
       "conditions": []
@@ -479,9 +498,11 @@
       "properties": {
         "fields": [
           "login",
-          "disabled",
           "password",
-          "restaurant"
+          "restaurant",
+          "confirmed",
+          "blocked",
+          "json"
         ]
       },
       "conditions": []
@@ -493,12 +514,18 @@
         "fields": [
           "name",
           "restaurant_avatars",
-          "serviceDisabled",
+          "blocked",
           "advertisementConfigDisabled",
           "meny_service_class",
           "restaurant_users",
           "cms_advertisements",
-          "restaurant_menu"
+          "restaurant_menu",
+          "address",
+          "confirmed",
+          "resetPasswordToken",
+          "confirmationToken",
+          "json",
+          "remarks"
         ]
       },
       "conditions": []
@@ -516,12 +543,18 @@
         "fields": [
           "name",
           "restaurant_avatars",
-          "serviceDisabled",
+          "blocked",
           "advertisementConfigDisabled",
           "meny_service_class",
           "restaurant_users",
           "cms_advertisements",
-          "restaurant_menu"
+          "restaurant_menu",
+          "address",
+          "confirmed",
+          "resetPasswordToken",
+          "confirmationToken",
+          "json",
+          "remarks"
         ]
       },
       "conditions": []
@@ -533,12 +566,18 @@
         "fields": [
           "name",
           "restaurant_avatars",
-          "serviceDisabled",
+          "blocked",
           "advertisementConfigDisabled",
           "meny_service_class",
           "restaurant_users",
           "cms_advertisements",
-          "restaurant_menu"
+          "restaurant_menu",
+          "address",
+          "confirmed",
+          "resetPasswordToken",
+          "confirmationToken",
+          "json",
+          "remarks"
         ]
       },
       "conditions": []

@@ -6,9 +6,9 @@
       "bulkable": true,
       "filterable": true,
       "searchable": true,
-      "pageSize": 10,
+      "pageSize": 100,
       "mainField": "login",
-      "defaultSortBy": "id",
+      "defaultSortBy": "login",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -30,20 +30,6 @@
         },
         "list": {
           "label": "login",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "disabled": {
-        "edit": {
-          "label": "disabled",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "disabled",
           "searchable": true,
           "sortable": true
         }
@@ -75,6 +61,48 @@
           "label": "restaurant",
           "searchable": true,
           "sortable": true
+        }
+      },
+      "confirmed": {
+        "edit": {
+          "label": "confirmed",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "confirmed",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "blocked": {
+        "edit": {
+          "label": "blocked",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "blocked",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "json": {
+        "edit": {
+          "label": "json",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "json",
+          "searchable": false,
+          "sortable": false
         }
       },
       "createdAt": {
@@ -120,8 +148,18 @@
         ],
         [
           {
-            "name": "disabled",
+            "name": "confirmed",
             "size": 4
+          },
+          {
+            "name": "blocked",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "json",
+            "size": 12
           }
         ]
       ],
@@ -129,10 +167,8 @@
         "restaurant"
       ],
       "list": [
-        "id",
-        "disabled",
-        "createdAt",
-        "login"
+        "login",
+        "restaurant"
       ]
     }
   },

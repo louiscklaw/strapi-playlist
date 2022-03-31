@@ -6,7 +6,7 @@
       "bulkable": true,
       "filterable": true,
       "searchable": true,
-      "pageSize": 10,
+      "pageSize": 100,
       "mainField": "name",
       "defaultSortBy": "name",
       "defaultSortOrder": "ASC"
@@ -43,21 +43,21 @@
           "editable": true
         },
         "list": {
-          "label": "restaurant_avatars",
+          "label": "avatars",
           "searchable": false,
           "sortable": false
         }
       },
-      "serviceDisabled": {
+      "blocked": {
         "edit": {
-          "label": "serviceDisabled",
+          "label": "blocked",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "serviceDisabled",
+          "label": "blocked",
           "searchable": true,
           "sortable": true
         }
@@ -71,7 +71,7 @@
           "editable": true
         },
         "list": {
-          "label": "advertisementConfigDisabled",
+          "label": "adConfigDisabled",
           "searchable": true,
           "sortable": true
         }
@@ -136,6 +136,90 @@
           "sortable": true
         }
       },
+      "address": {
+        "edit": {
+          "label": "address",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "address",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "confirmed": {
+        "edit": {
+          "label": "confirmed",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "confirmed",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "resetPasswordToken": {
+        "edit": {
+          "label": "resetPasswordToken",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "resetPasswordToken",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "confirmationToken": {
+        "edit": {
+          "label": "confirmationToken",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "confirmationToken",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "json": {
+        "edit": {
+          "label": "json",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "json",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "remarks": {
+        "edit": {
+          "label": "remarks",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "remarks",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -166,26 +250,32 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "name",
-        "restaurant_avatars",
-        "meny_service_class"
-      ],
       "edit": [
         [
           {
             "name": "name",
-            "size": 6
+            "size": 4
+          },
+          {
+            "name": "address",
+            "size": 4
+          },
+          {
+            "name": "restaurant_avatars",
+            "size": 4
           }
         ],
         [
           {
-            "name": "restaurant_avatars",
-            "size": 6
+            "name": "remarks",
+            "size": 4
           },
           {
-            "name": "serviceDisabled",
+            "name": "blocked",
+            "size": 4
+          },
+          {
+            "name": "confirmed",
             "size": 4
           }
         ],
@@ -194,6 +284,12 @@
             "name": "advertisementConfigDisabled",
             "size": 4
           }
+        ],
+        [
+          {
+            "name": "json",
+            "size": 12
+          }
         ]
       ],
       "editRelations": [
@@ -201,6 +297,14 @@
         "restaurant_users",
         "cms_advertisements",
         "restaurant_menu"
+      ],
+      "list": [
+        "restaurant_avatars",
+        "name",
+        "address",
+        "meny_service_class",
+        "restaurant_users",
+        "advertisementConfigDisabled"
       ]
     }
   },

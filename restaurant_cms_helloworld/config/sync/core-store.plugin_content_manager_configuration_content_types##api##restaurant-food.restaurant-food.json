@@ -8,7 +8,7 @@
       "searchable": true,
       "pageSize": 100,
       "mainField": "name",
-      "defaultSortBy": "name",
+      "defaultSortBy": "id",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -105,6 +105,35 @@
           "sortable": false
         }
       },
+      "restaurant_food_tags": {
+        "edit": {
+          "label": "restaurant_food_tags",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "restaurant_food_tags",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "position": {
+        "edit": {
+          "label": "position",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "position",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -135,6 +164,15 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "name",
+        "price",
+        "images",
+        "available",
+        "restaurant_food_categories",
+        "restaurant_food_tags"
+      ],
       "edit": [
         [
           {
@@ -162,17 +200,16 @@
           {
             "name": "available",
             "size": 4
+          },
+          {
+            "name": "position",
+            "size": 4
           }
         ]
       ],
       "editRelations": [
-        "restaurant_food_categories"
-      ],
-      "list": [
-        "id",
-        "name",
-        "price",
-        "images"
+        "restaurant_food_categories",
+        "restaurant_food_tags"
       ]
     }
   },

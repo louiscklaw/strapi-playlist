@@ -1719,11 +1719,16 @@
             "audios"
           ]
         },
-        "serviceDisabled": {
-          "type": "boolean"
+        "blocked": {
+          "type": "boolean",
+          "required": true,
+          "private": true,
+          "default": false
         },
         "advertisementConfigDisabled": {
-          "type": "boolean"
+          "type": "boolean",
+          "default": true,
+          "required": true
         },
         "meny_service_class": {
           "type": "relation",
@@ -1747,6 +1752,27 @@
           "type": "relation",
           "relation": "oneToOne",
           "target": "api::restaurant-menu.restaurant-menu"
+        },
+        "address": {
+          "type": "text"
+        },
+        "confirmed": {
+          "type": "boolean",
+          "required": true,
+          "private": true,
+          "default": true
+        },
+        "resetPasswordToken": {
+          "type": "string"
+        },
+        "confirmationToken": {
+          "type": "string"
+        },
+        "json": {
+          "type": "json"
+        },
+        "remarks": {
+          "type": "text"
         },
         "createdAt": {
           "type": "datetime"
@@ -1802,11 +1828,16 @@
               "audios"
             ]
           },
-          "serviceDisabled": {
-            "type": "boolean"
+          "blocked": {
+            "type": "boolean",
+            "required": true,
+            "private": true,
+            "default": false
           },
           "advertisementConfigDisabled": {
-            "type": "boolean"
+            "type": "boolean",
+            "default": true,
+            "required": true
           },
           "meny_service_class": {
             "type": "relation",
@@ -1830,6 +1861,27 @@
             "type": "relation",
             "relation": "oneToOne",
             "target": "api::restaurant-menu.restaurant-menu"
+          },
+          "address": {
+            "type": "text"
+          },
+          "confirmed": {
+            "type": "boolean",
+            "required": true,
+            "private": true,
+            "default": true
+          },
+          "resetPasswordToken": {
+            "type": "string"
+          },
+          "confirmationToken": {
+            "type": "string"
+          },
+          "json": {
+            "type": "json"
+          },
+          "remarks": {
+            "type": "text"
           }
         },
         "kind": "collectionType"
@@ -1884,7 +1936,18 @@
           "type": "relation",
           "relation": "manyToMany",
           "target": "api::restaurant-food-category.restaurant-food-category",
+          "mappedBy": "restaurant_foods"
+        },
+        "restaurant_food_tags": {
+          "type": "relation",
+          "relation": "manyToMany",
+          "target": "api::restaurant-food-tag.restaurant-food-tag",
           "inversedBy": "restaurant_foods"
+        },
+        "position": {
+          "type": "integer",
+          "default": 1,
+          "required": true
         },
         "createdAt": {
           "type": "datetime"
@@ -1959,7 +2022,18 @@
             "type": "relation",
             "relation": "manyToMany",
             "target": "api::restaurant-food-category.restaurant-food-category",
+            "mappedBy": "restaurant_foods"
+          },
+          "restaurant_food_tags": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::restaurant-food-tag.restaurant-food-tag",
             "inversedBy": "restaurant_foods"
+          },
+          "position": {
+            "type": "integer",
+            "default": 1,
+            "required": true
           }
         },
         "kind": "collectionType"
@@ -1979,7 +2053,8 @@
       "info": {
         "singularName": "restaurant-food-category",
         "pluralName": "restaurant-food-categories",
-        "displayName": "Restaurant Food Category"
+        "displayName": "Restaurant Food Category",
+        "description": ""
       },
       "options": {
         "draftAndPublish": true
@@ -2003,6 +2078,11 @@
           "relation": "manyToMany",
           "target": "api::restaurant-menu.restaurant-menu",
           "inversedBy": "restaurant_food_categories"
+        },
+        "position": {
+          "type": "integer",
+          "default": 1,
+          "required": true
         },
         "createdAt": {
           "type": "datetime"
@@ -2042,7 +2122,8 @@
         "info": {
           "singularName": "restaurant-food-category",
           "pluralName": "restaurant-food-categories",
-          "displayName": "Restaurant Food Category"
+          "displayName": "Restaurant Food Category",
+          "description": ""
         },
         "options": {
           "draftAndPublish": true
@@ -2066,6 +2147,11 @@
             "relation": "manyToMany",
             "target": "api::restaurant-menu.restaurant-menu",
             "inversedBy": "restaurant_food_categories"
+          },
+          "position": {
+            "type": "integer",
+            "default": 1,
+            "required": true
           }
         },
         "kind": "collectionType"
@@ -2097,6 +2183,12 @@
         },
         "description": {
           "type": "richtext"
+        },
+        "restaurant_foods": {
+          "type": "relation",
+          "relation": "manyToMany",
+          "target": "api::restaurant-food.restaurant-food",
+          "mappedBy": "restaurant_food_tags"
         },
         "createdAt": {
           "type": "datetime"
@@ -2148,6 +2240,12 @@
           },
           "description": {
             "type": "richtext"
+          },
+          "restaurant_foods": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::restaurant-food.restaurant-food",
+            "mappedBy": "restaurant_food_tags"
           }
         },
         "kind": "collectionType"
@@ -2188,7 +2286,12 @@
           "type": "relation",
           "relation": "manyToMany",
           "target": "api::restaurant-food-category.restaurant-food-category",
-          "inversedBy": "restaurant_menus"
+          "mappedBy": "restaurant_menus"
+        },
+        "position": {
+          "type": "integer",
+          "required": true,
+          "default": 1
         },
         "createdAt": {
           "type": "datetime"
@@ -2243,7 +2346,12 @@
             "type": "relation",
             "relation": "manyToMany",
             "target": "api::restaurant-food-category.restaurant-food-category",
-            "inversedBy": "restaurant_menus"
+            "mappedBy": "restaurant_menus"
+          },
+          "position": {
+            "type": "integer",
+            "required": true,
+            "default": 1
           }
         },
         "kind": "collectionType"
@@ -2424,9 +2532,6 @@
           "required": true,
           "unique": true
         },
-        "disabled": {
-          "type": "boolean"
-        },
         "password": {
           "type": "password"
         },
@@ -2435,6 +2540,20 @@
           "relation": "manyToOne",
           "target": "api::restaurant.restaurant",
           "inversedBy": "restaurant_users"
+        },
+        "confirmed": {
+          "type": "boolean",
+          "default": true,
+          "required": true
+        },
+        "blocked": {
+          "type": "boolean",
+          "default": false,
+          "required": true,
+          "private": true
+        },
+        "json": {
+          "type": "json"
         },
         "createdAt": {
           "type": "datetime"
@@ -2481,9 +2600,6 @@
             "required": true,
             "unique": true
           },
-          "disabled": {
-            "type": "boolean"
-          },
           "password": {
             "type": "password"
           },
@@ -2492,6 +2608,20 @@
             "relation": "manyToOne",
             "target": "api::restaurant.restaurant",
             "inversedBy": "restaurant_users"
+          },
+          "confirmed": {
+            "type": "boolean",
+            "default": true,
+            "required": true
+          },
+          "blocked": {
+            "type": "boolean",
+            "default": false,
+            "required": true,
+            "private": true
+          },
+          "json": {
+            "type": "json"
           }
         },
         "kind": "collectionType"

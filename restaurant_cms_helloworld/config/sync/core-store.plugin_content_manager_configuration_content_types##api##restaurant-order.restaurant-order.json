@@ -6,7 +6,7 @@
       "bulkable": true,
       "filterable": true,
       "searchable": true,
-      "pageSize": 10,
+      "pageSize": 100,
       "mainField": "state",
       "defaultSortBy": "state",
       "defaultSortOrder": "ASC"
@@ -64,13 +64,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "state",
-        "createdAt",
-        "updatedAt"
-      ],
-      "editRelations": [],
       "edit": [
         [
           {
@@ -78,6 +71,13 @@
             "size": 6
           }
         ]
+      ],
+      "editRelations": [],
+      "list": [
+        "id",
+        "state",
+        "createdAt",
+        "updatedAt"
       ]
     }
   },
