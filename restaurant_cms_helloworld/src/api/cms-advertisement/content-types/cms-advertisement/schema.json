@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cms_advertisements",
+  "info": {
+    "singularName": "cms-advertisement",
+    "pluralName": "cms-advertisements",
+    "displayName": "CMS Advertisement",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "restaurants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::restaurant.restaurant",
+      "mappedBy": "cms_advertisements"
+    }
+  }
+}

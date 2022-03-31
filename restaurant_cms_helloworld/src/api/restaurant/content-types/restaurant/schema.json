@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurants",
+  "info": {
+    "singularName": "restaurant",
+    "pluralName": "restaurants",
+    "displayName": "Restaurants",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "restaurant_avatars": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "serviceDisabled": {
+      "type": "boolean"
+    },
+    "advertisementConfigDisabled": {
+      "type": "boolean"
+    },
+    "meny_service_class": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::meny-service-class.meny-service-class",
+      "inversedBy": "restaurants"
+    },
+    "restaurant_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::restaurant-user.restaurant-user",
+      "mappedBy": "restaurant"
+    },
+    "cms_advertisements": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::cms-advertisement.cms-advertisement",
+      "inversedBy": "restaurants"
+    },
+    "restaurant_menu": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::restaurant-menu.restaurant-menu"
+    }
+  }
+}

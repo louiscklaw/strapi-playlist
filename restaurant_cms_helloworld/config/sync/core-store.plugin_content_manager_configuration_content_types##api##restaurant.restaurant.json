@@ -1,0 +1,210 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::restaurant.restaurant",
+  "value": {
+    "uid": "api::restaurant.restaurant",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "restaurant_avatars": {
+        "edit": {
+          "label": "restaurant_avatars",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "restaurant_avatars",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "serviceDisabled": {
+        "edit": {
+          "label": "serviceDisabled",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "serviceDisabled",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "advertisementConfigDisabled": {
+        "edit": {
+          "label": "advertisementConfigDisabled",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "advertisementConfigDisabled",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "meny_service_class": {
+        "edit": {
+          "label": "meny_service_class",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "meny_service_class",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "restaurant_users": {
+        "edit": {
+          "label": "restaurant_users",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "login"
+        },
+        "list": {
+          "label": "restaurant_users",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "cms_advertisements": {
+        "edit": {
+          "label": "cms_advertisements",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "title"
+        },
+        "list": {
+          "label": "cms_advertisements",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "restaurant_menu": {
+        "edit": {
+          "label": "restaurant_menu",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "restaurant_menu",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "name",
+        "restaurant_avatars",
+        "meny_service_class"
+      ],
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "restaurant_avatars",
+            "size": 6
+          },
+          {
+            "name": "serviceDisabled",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "advertisementConfigDisabled",
+            "size": 4
+          }
+        ]
+      ],
+      "editRelations": [
+        "meny_service_class",
+        "restaurant_users",
+        "cms_advertisements",
+        "restaurant_menu"
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

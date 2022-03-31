@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hello_tables",
+  "info": {
+    "singularName": "hello-table",
+    "pluralName": "hello-tables",
+    "displayName": "hello_table",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    }
+  }
+}

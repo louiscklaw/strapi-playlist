@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurant_users",
+  "info": {
+    "singularName": "restaurant-user",
+    "pluralName": "restaurant-users",
+    "displayName": "Restaurant Users",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "login": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "disabled": {
+      "type": "boolean"
+    },
+    "password": {
+      "type": "password"
+    },
+    "restaurant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::restaurant.restaurant",
+      "inversedBy": "restaurant_users"
+    }
+  }
+}

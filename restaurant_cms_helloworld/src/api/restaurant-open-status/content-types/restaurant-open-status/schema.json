@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurant_open_statuses",
+  "info": {
+    "singularName": "restaurant-open-status",
+    "pluralName": "restaurant-open-statuses",
+    "displayName": "Restaurant Open Status",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "status": {
+      "type": "string"
+    }
+  }
+}

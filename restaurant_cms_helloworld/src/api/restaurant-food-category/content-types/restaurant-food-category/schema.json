@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurant_food_categories",
+  "info": {
+    "singularName": "restaurant-food-category",
+    "pluralName": "restaurant-food-categories",
+    "displayName": "Restaurant Food Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "restaurant_foods": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::restaurant-food.restaurant-food",
+      "inversedBy": "restaurant_food_categories"
+    },
+    "restaurant_menus": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::restaurant-menu.restaurant-menu",
+      "inversedBy": "restaurant_food_categories"
+    }
+  }
+}

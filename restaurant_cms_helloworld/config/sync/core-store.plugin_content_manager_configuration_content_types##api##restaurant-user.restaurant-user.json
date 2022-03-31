@@ -1,0 +1,142 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::restaurant-user.restaurant-user",
+  "value": {
+    "uid": "api::restaurant-user.restaurant-user",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "login",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "login": {
+        "edit": {
+          "label": "login",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "login",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "disabled": {
+        "edit": {
+          "label": "disabled",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "disabled",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "password": {
+        "edit": {
+          "label": "password",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "password",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "restaurant": {
+        "edit": {
+          "label": "restaurant",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "restaurant",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "login",
+            "size": 6
+          },
+          {
+            "name": "password",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "disabled",
+            "size": 4
+          }
+        ]
+      ],
+      "editRelations": [
+        "restaurant"
+      ],
+      "list": [
+        "id",
+        "disabled",
+        "createdAt",
+        "login"
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}
