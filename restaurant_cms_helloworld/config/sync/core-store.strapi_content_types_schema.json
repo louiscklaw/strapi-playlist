@@ -1535,7 +1535,7 @@
       "info": {
         "singularName": "hello-table",
         "pluralName": "hello-tables",
-        "displayName": "hello_table",
+        "displayName": "_hello_table",
         "description": ""
       },
       "options": {
@@ -1545,6 +1545,9 @@
       "attributes": {
         "title": {
           "type": "text"
+        },
+        "test": {
+          "type": "json"
         },
         "createdAt": {
           "type": "datetime"
@@ -1584,7 +1587,7 @@
         "info": {
           "singularName": "hello-table",
           "pluralName": "hello-tables",
-          "displayName": "hello_table",
+          "displayName": "_hello_table",
           "description": ""
         },
         "options": {
@@ -1594,6 +1597,9 @@
         "attributes": {
           "title": {
             "type": "text"
+          },
+          "test": {
+            "type": "json"
           }
         },
         "kind": "collectionType"
@@ -1708,7 +1714,7 @@
         "name": {
           "type": "string"
         },
-        "restaurant_avatars": {
+        "avatars": {
           "type": "media",
           "multiple": true,
           "required": false,
@@ -1774,6 +1780,12 @@
         "remarks": {
           "type": "text"
         },
+        "settings": {
+          "type": "json"
+        },
+        "openSchedule": {
+          "type": "json"
+        },
         "createdAt": {
           "type": "datetime"
         },
@@ -1817,7 +1829,7 @@
           "name": {
             "type": "string"
           },
-          "restaurant_avatars": {
+          "avatars": {
             "type": "media",
             "multiple": true,
             "required": false,
@@ -1882,6 +1894,12 @@
           },
           "remarks": {
             "type": "text"
+          },
+          "settings": {
+            "type": "json"
+          },
+          "openSchedule": {
+            "type": "json"
           }
         },
         "kind": "collectionType"
@@ -2510,6 +2528,134 @@
       "uid": "api::restaurant-order.restaurant-order",
       "apiName": "restaurant-order",
       "globalId": "RestaurantOrder",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::restaurant-t-and-c.restaurant-t-and-c": {
+      "kind": "collectionType",
+      "collectionName": "restaurant_t_and_cs",
+      "info": {
+        "singularName": "restaurant-t-and-c",
+        "pluralName": "restaurant-t-and-cs",
+        "displayName": "Restaurant T And C",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "attributes": {
+        "detail": {
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          },
+          "type": "richtext"
+        },
+        "name": {
+          "pluginOptions": {
+            "i18n": {
+              "localized": true
+            }
+          },
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "localizations": {
+          "writable": true,
+          "private": false,
+          "configurable": false,
+          "visible": false,
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::restaurant-t-and-c.restaurant-t-and-c"
+        },
+        "locale": {
+          "writable": true,
+          "private": false,
+          "configurable": false,
+          "visible": false,
+          "type": "string"
+        }
+      },
+      "__schema__": {
+        "collectionName": "restaurant_t_and_cs",
+        "info": {
+          "singularName": "restaurant-t-and-c",
+          "pluralName": "restaurant-t-and-cs",
+          "displayName": "Restaurant T And C",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {
+          "i18n": {
+            "localized": true
+          }
+        },
+        "attributes": {
+          "detail": {
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            },
+            "type": "richtext"
+          },
+          "name": {
+            "pluginOptions": {
+              "i18n": {
+                "localized": true
+              }
+            },
+            "type": "string"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "restaurant-t-and-c",
+      "connection": "default",
+      "uid": "api::restaurant-t-and-c.restaurant-t-and-c",
+      "apiName": "restaurant-t-and-c",
+      "globalId": "RestaurantTAndC",
       "actions": {},
       "lifecycles": {}
     },

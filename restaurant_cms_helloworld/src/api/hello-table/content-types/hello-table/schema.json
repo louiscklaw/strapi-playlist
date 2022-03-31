@@ -17,6 +17,12 @@
     },
     "test": {
       "type": "json"
+    },
+    "meny_service_classes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::meny-service-class.meny-service-class",
+      "mappedBy": "hello_table"
     }
   }
 }

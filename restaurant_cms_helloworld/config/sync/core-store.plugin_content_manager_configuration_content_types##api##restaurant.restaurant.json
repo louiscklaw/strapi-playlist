@@ -24,7 +24,7 @@
         "edit": {
           "label": "name",
           "description": "",
-          "placeholder": "",
+          "placeholder": "name",
           "visible": true,
           "editable": true
         },
@@ -34,9 +34,9 @@
           "sortable": true
         }
       },
-      "restaurant_avatars": {
+      "avatars": {
         "edit": {
-          "label": "restaurant_avatars",
+          "label": "avatars",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -140,7 +140,7 @@
         "edit": {
           "label": "address",
           "description": "",
-          "placeholder": "",
+          "placeholder": "address",
           "visible": true,
           "editable": true
         },
@@ -220,6 +220,34 @@
           "sortable": true
         }
       },
+      "settings": {
+        "edit": {
+          "label": "settings",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "settings",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "openSchedule": {
+        "edit": {
+          "label": "openSchedule",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "openSchedule",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -258,11 +286,7 @@
           },
           {
             "name": "address",
-            "size": 4
-          },
-          {
-            "name": "restaurant_avatars",
-            "size": 4
+            "size": 8
           }
         ],
         [
@@ -271,18 +295,34 @@
             "size": 4
           },
           {
+            "name": "avatars",
+            "size": 8
+          }
+        ],
+        [
+          {
             "name": "blocked",
             "size": 4
           },
           {
             "name": "confirmed",
             "size": 4
+          },
+          {
+            "name": "advertisementConfigDisabled",
+            "size": 4
           }
         ],
         [
           {
-            "name": "advertisementConfigDisabled",
-            "size": 4
+            "name": "settings",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "openSchedule",
+            "size": 12
           }
         ],
         [
@@ -299,7 +339,6 @@
         "restaurant_menu"
       ],
       "list": [
-        "restaurant_avatars",
         "name",
         "address",
         "meny_service_class",

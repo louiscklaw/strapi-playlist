@@ -89,7 +89,8 @@
       "subject": "api::hello-table.hello-table",
       "properties": {
         "fields": [
-          "title"
+          "title",
+          "test"
         ]
       },
       "conditions": []
@@ -111,7 +112,8 @@
       "subject": "api::hello-table.hello-table",
       "properties": {
         "fields": [
-          "title"
+          "title",
+          "test"
         ]
       },
       "conditions": []
@@ -121,7 +123,8 @@
       "subject": "api::hello-table.hello-table",
       "properties": {
         "fields": [
-          "title"
+          "title",
+          "test"
         ]
       },
       "conditions": []
@@ -458,6 +461,68 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::restaurant-t-and-c.restaurant-t-and-c",
+      "properties": {
+        "fields": [
+          "detail",
+          "name"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::restaurant-t-and-c.restaurant-t-and-c",
+      "properties": {
+        "locales": [
+          "en"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::restaurant-t-and-c.restaurant-t-and-c",
+      "properties": {
+        "locales": [
+          "en"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::restaurant-t-and-c.restaurant-t-and-c",
+      "properties": {
+        "fields": [
+          "detail",
+          "name"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::restaurant-t-and-c.restaurant-t-and-c",
+      "properties": {
+        "fields": [
+          "detail",
+          "name"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::restaurant-user.restaurant-user",
       "properties": {
         "fields": [
@@ -513,7 +578,7 @@
       "properties": {
         "fields": [
           "name",
-          "restaurant_avatars",
+          "avatars",
           "blocked",
           "advertisementConfigDisabled",
           "meny_service_class",
@@ -525,7 +590,9 @@
           "resetPasswordToken",
           "confirmationToken",
           "json",
-          "remarks"
+          "remarks",
+          "settings",
+          "openSchedule"
         ]
       },
       "conditions": []
@@ -542,7 +609,7 @@
       "properties": {
         "fields": [
           "name",
-          "restaurant_avatars",
+          "avatars",
           "blocked",
           "advertisementConfigDisabled",
           "meny_service_class",
@@ -554,7 +621,9 @@
           "resetPasswordToken",
           "confirmationToken",
           "json",
-          "remarks"
+          "remarks",
+          "settings",
+          "openSchedule"
         ]
       },
       "conditions": []
@@ -565,7 +634,7 @@
       "properties": {
         "fields": [
           "name",
-          "restaurant_avatars",
+          "avatars",
           "blocked",
           "advertisementConfigDisabled",
           "meny_service_class",
@@ -577,7 +646,9 @@
           "resetPasswordToken",
           "confirmationToken",
           "json",
-          "remarks"
+          "remarks",
+          "settings",
+          "openSchedule"
         ]
       },
       "conditions": []

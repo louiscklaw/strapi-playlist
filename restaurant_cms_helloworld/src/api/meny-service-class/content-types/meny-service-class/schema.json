@@ -20,6 +20,12 @@
       "relation": "oneToMany",
       "target": "api::restaurant.restaurant",
       "mappedBy": "meny_service_class"
+    },
+    "hello_table": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::hello-table.hello-table",
+      "inversedBy": "meny_service_classes"
     }
   }
 }

@@ -1,14 +1,14 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::hello-table.hello-table",
+  "key": "plugin_content_manager_configuration_content_types::api::restaurant-t-and-c.restaurant-t-and-c",
   "value": {
-    "uid": "api::hello-table.hello-table",
+    "uid": "api::restaurant-t-and-c.restaurant-t-and-c",
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "title",
-      "defaultSortBy": "title",
+      "mainField": "id",
+      "defaultSortBy": "id",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -20,32 +20,32 @@
           "sortable": true
         }
       },
-      "title": {
+      "detail": {
         "edit": {
-          "label": "title",
+          "label": "detail",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "title",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "test": {
-        "edit": {
-          "label": "test",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "test",
+          "label": "detail",
           "searchable": false,
           "sortable": false
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
         }
       },
       "createdAt": {
@@ -78,27 +78,25 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "title",
-        "createdAt",
-        "updatedAt"
-      ],
       "edit": [
         [
           {
-            "name": "title",
+            "name": "name",
             "size": 6
           }
         ],
         [
           {
-            "name": "test",
+            "name": "detail",
             "size": 12
           }
         ]
       ],
-      "editRelations": []
+      "editRelations": [],
+      "list": [
+        "name",
+        "updatedAt"
+      ]
     }
   },
   "type": "object",
