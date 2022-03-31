@@ -26,11 +26,16 @@
         "audios"
       ]
     },
-    "serviceDisabled": {
-      "type": "boolean"
+    "blocked": {
+      "type": "boolean",
+      "required": true,
+      "private": true,
+      "default": false
     },
     "advertisementConfigDisabled": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true,
+      "required": true
     },
     "meny_service_class": {
       "type": "relation",
@@ -54,6 +59,27 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::restaurant-menu.restaurant-menu"
+    },
+    "address": {
+      "type": "text"
+    },
+    "confirmed": {
+      "type": "boolean",
+      "required": true,
+      "private": true,
+      "default": true
+    },
+    "resetPasswordToken": {
+      "type": "string"
+    },
+    "confirmationToken": {
+      "type": "string"
+    },
+    "json": {
+      "type": "json"
+    },
+    "remarks": {
+      "type": "text"
     }
   }
 }

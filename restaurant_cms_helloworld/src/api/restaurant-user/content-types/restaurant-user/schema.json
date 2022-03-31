@@ -17,9 +17,6 @@
       "required": true,
       "unique": true
     },
-    "disabled": {
-      "type": "boolean"
-    },
     "password": {
       "type": "password"
     },
@@ -28,6 +25,20 @@
       "relation": "manyToOne",
       "target": "api::restaurant.restaurant",
       "inversedBy": "restaurant_users"
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "required": true,
+      "private": true
+    },
+    "json": {
+      "type": "json"
     }
   }
 }

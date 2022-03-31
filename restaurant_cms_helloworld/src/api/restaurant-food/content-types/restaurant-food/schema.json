@@ -40,6 +40,12 @@
       "relation": "manyToMany",
       "target": "api::restaurant-food-category.restaurant-food-category",
       "mappedBy": "restaurant_foods"
+    },
+    "restaurant_food_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::restaurant-food-tag.restaurant-food-tag",
+      "inversedBy": "restaurant_foods"
     }
   }
 }
