@@ -25,7 +25,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::restaurant-food-category.restaurant-food-category",
-      "inversedBy": "restaurant_menus"
+      "mappedBy": "restaurant_menus"
     }
   }
 }
