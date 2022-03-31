@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "advertisement_windows",
+  "info": {
+    "singularName": "advertisement-window",
+    "pluralName": "advertisement-windows",
+    "displayName": "Advertisement Window",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "admin_advertisements": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::admin-advertisement.admin-advertisement",
+      "inversedBy": "advertisement_windows"
+    }
+  }
+}

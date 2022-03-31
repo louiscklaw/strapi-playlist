@@ -39,6 +39,12 @@
       "relation": "oneToMany",
       "target": "api::restaurant.restaurant",
       "mappedBy": "admin_advertisement"
+    },
+    "advertisement_windows": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::advertisement-window.advertisement-window",
+      "inversedBy": "admin_advertisements"
     }
   }
 }
