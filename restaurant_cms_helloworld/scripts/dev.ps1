@@ -1,13 +1,8 @@
 # netstat -ano | findstr :<PORT>
 # taskkill /PID <PID> /F
-yarn --dev
-
 npx kill-port 1337
 
-# Remove-item -Recurse -Force .cache .tmp build
+Remove-item -Recurse -Force '.\.cache'
+Remove-item -Recurse -Force '.\build'
 
-# yarn build
 yarn develop
-
-# yarn cs import
-

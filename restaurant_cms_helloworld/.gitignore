@@ -49,7 +49,7 @@ $RECYCLE.BIN/
 *.com
 *.class
 *.dll
-*.exe
+# *.exe
 *.o
 *.seed
 *.so
