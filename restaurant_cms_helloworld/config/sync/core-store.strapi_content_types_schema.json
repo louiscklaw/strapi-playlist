@@ -2608,7 +2608,8 @@
           "type": "richtext"
         },
         "disabled": {
-          "type": "boolean"
+          "type": "boolean",
+          "default": false
         },
         "restaurant_food_categories": {
           "type": "relation",
@@ -2668,7 +2669,8 @@
             "type": "richtext"
           },
           "disabled": {
-            "type": "boolean"
+            "type": "boolean",
+            "default": false
           },
           "restaurant_food_categories": {
             "type": "relation",
