@@ -29,6 +29,11 @@
       "relation": "manyToMany",
       "target": "api::restaurant-menu.restaurant-menu",
       "inversedBy": "restaurant_food_categories"
+    },
+    "position": {
+      "type": "integer",
+      "default": 1,
+      "required": true
     }
   }
 }
