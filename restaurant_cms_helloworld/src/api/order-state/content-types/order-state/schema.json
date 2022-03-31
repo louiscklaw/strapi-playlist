@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_states",
+  "info": {
+    "singularName": "order-state",
+    "pluralName": "order-states",
+    "displayName": "_Order State"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pending": {
+      "type": "string"
+    },
+    "bill_cleared": {
+      "type": "string"
+    },
+    "restaurant_orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::restaurant-order.restaurant-order",
+      "mappedBy": "order_state"
+    }
+  }
+}

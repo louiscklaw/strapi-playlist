@@ -4,7 +4,8 @@
   "info": {
     "singularName": "restaurant-order",
     "pluralName": "restaurant-orders",
-    "displayName": "Restaurant Orders"
+    "displayName": "Restaurant Orders",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,12 @@
   "attributes": {
     "state": {
       "type": "string"
+    },
+    "order_state": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::order-state.order-state",
+      "inversedBy": "restaurant_orders"
     }
   }
 }
