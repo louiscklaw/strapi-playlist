@@ -4,30 +4,41 @@
   "info": {
     "singularName": "admin-advertisement",
     "pluralName": "admin-advertisements",
-    "displayName": "Admin Advertisement"
+    "displayName": "Admin Advertisement",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "title": {
       "type": "string"
     },
     "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "position": {
       "type": "integer",
       "default": 1,
       "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "restaurants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::restaurant.restaurant",
+      "mappedBy": "admin_advertisement"
     }
   }
 }
