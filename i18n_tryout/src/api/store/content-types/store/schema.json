@@ -1,10 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "hello_content_types",
+  "collectionName": "stores",
   "info": {
-    "singularName": "hello-content-type",
-    "pluralName": "hello-content-types",
-    "displayName": "hello_content_type"
+    "singularName": "store",
+    "pluralName": "stores",
+    "displayName": "Stores",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,15 +16,13 @@
     }
   },
   "attributes": {
-    "name": {
+    "title": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "type": "string",
-      "required": true,
-      "unique": true
+      }
     }
   }
 }
