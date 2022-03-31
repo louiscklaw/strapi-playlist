@@ -21,6 +21,12 @@
       "relation": "manyToMany",
       "target": "api::admin-advertisement.admin-advertisement",
       "inversedBy": "advertisement_windows"
+    },
+    "restaurant_advertisement": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cms-advertisement.cms-advertisement",
+      "inversedBy": "advertisement_windows"
     }
   }
 }
