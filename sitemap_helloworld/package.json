@@ -1,0 +1,31 @@
+{
+  "name": "sitemap-helloworld",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.1.6",
+    "@strapi/plugin-users-permissions": "4.1.6",
+    "@strapi/strapi": "4.1.6",
+    "better-sqlite3": "^7.5.0",
+    "strapi-plugin-sitemap": "^2.0.6"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "5b313a29-8bb7-48c7-91e2-3cbdb148c7dd"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
