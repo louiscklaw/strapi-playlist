@@ -5,36 +5,99 @@
   "permissions": [
     {
       "action": "plugin::content-manager.explorer.create",
-      "subject": "api::advertisement-position.advertisement-position",
+      "subject": "api::admin-advertisement.admin-advertisement",
       "properties": {
         "fields": [
-          "position"
+          "title",
+          "images",
+          "position",
+          "description",
+          "restaurants",
+          "advertisement_windows"
         ]
       },
       "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.delete",
-      "subject": "api::advertisement-position.advertisement-position",
+      "subject": "api::admin-advertisement.admin-advertisement",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::admin-advertisement.admin-advertisement",
       "properties": {},
       "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.read",
-      "subject": "api::advertisement-position.advertisement-position",
+      "subject": "api::admin-advertisement.admin-advertisement",
       "properties": {
         "fields": [
-          "position"
+          "title",
+          "images",
+          "position",
+          "description",
+          "restaurants",
+          "advertisement_windows"
         ]
       },
       "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.update",
-      "subject": "api::advertisement-position.advertisement-position",
+      "subject": "api::admin-advertisement.admin-advertisement",
       "properties": {
         "fields": [
-          "position"
+          "title",
+          "images",
+          "position",
+          "description",
+          "restaurants",
+          "advertisement_windows"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::advertisement-window.advertisement-window",
+      "properties": {
+        "fields": [
+          "name",
+          "admin_advertisements",
+          "restaurant_advertisement"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::advertisement-window.advertisement-window",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::advertisement-window.advertisement-window",
+      "properties": {
+        "fields": [
+          "name",
+          "admin_advertisements",
+          "restaurant_advertisement"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::advertisement-window.advertisement-window",
+      "properties": {
+        "fields": [
+          "name",
+          "admin_advertisements",
+          "restaurant_advertisement"
         ]
       },
       "conditions": []
@@ -47,7 +110,8 @@
           "title",
           "images",
           "description",
-          "restaurants"
+          "restaurants",
+          "advertisement_windows"
         ]
       },
       "conditions": []
@@ -66,7 +130,8 @@
           "title",
           "images",
           "description",
-          "restaurants"
+          "restaurants",
+          "advertisement_windows"
         ]
       },
       "conditions": []
@@ -79,7 +144,8 @@
           "title",
           "images",
           "description",
-          "restaurants"
+          "restaurants",
+          "advertisement_windows"
         ]
       },
       "conditions": []
@@ -90,7 +156,8 @@
       "properties": {
         "fields": [
           "title",
-          "test"
+          "test",
+          "meny_service_classes"
         ]
       },
       "conditions": []
@@ -113,7 +180,8 @@
       "properties": {
         "fields": [
           "title",
-          "test"
+          "test",
+          "meny_service_classes"
         ]
       },
       "conditions": []
@@ -124,7 +192,8 @@
       "properties": {
         "fields": [
           "title",
-          "test"
+          "test",
+          "meny_service_classes"
         ]
       },
       "conditions": []
@@ -135,7 +204,8 @@
       "properties": {
         "fields": [
           "name",
-          "restaurants"
+          "restaurants",
+          "hello_table"
         ]
       },
       "conditions": []
@@ -152,7 +222,8 @@
       "properties": {
         "fields": [
           "name",
-          "restaurants"
+          "restaurants",
+          "hello_table"
         ]
       },
       "conditions": []
@@ -163,7 +234,56 @@
       "properties": {
         "fields": [
           "name",
-          "restaurants"
+          "restaurants",
+          "hello_table"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::order-state.order-state",
+      "properties": {
+        "fields": [
+          "pending",
+          "bill_cleared",
+          "restaurant_orders"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::order-state.order-state",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::order-state.order-state",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::order-state.order-state",
+      "properties": {
+        "fields": [
+          "pending",
+          "bill_cleared",
+          "restaurant_orders"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::order-state.order-state",
+      "properties": {
+        "fields": [
+          "pending",
+          "bill_cleared",
+          "restaurant_orders"
         ]
       },
       "conditions": []
@@ -383,6 +503,51 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::restaurant-message.restaurant-message",
+      "properties": {
+        "fields": [
+          "subject",
+          "body"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::restaurant-message.restaurant-message",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::restaurant-message.restaurant-message",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::restaurant-message.restaurant-message",
+      "properties": {
+        "fields": [
+          "subject",
+          "body"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::restaurant-message.restaurant-message",
+      "properties": {
+        "fields": [
+          "subject",
+          "body"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::restaurant-open-status.restaurant-open-status",
       "properties": {
         "fields": [
@@ -422,7 +587,8 @@
       "subject": "api::restaurant-order.restaurant-order",
       "properties": {
         "fields": [
-          "state"
+          "state",
+          "order_state"
         ]
       },
       "conditions": []
@@ -444,7 +610,8 @@
       "subject": "api::restaurant-order.restaurant-order",
       "properties": {
         "fields": [
-          "state"
+          "state",
+          "order_state"
         ]
       },
       "conditions": []
@@ -454,7 +621,8 @@
       "subject": "api::restaurant-order.restaurant-order",
       "properties": {
         "fields": [
-          "state"
+          "state",
+          "order_state"
         ]
       },
       "conditions": []
@@ -592,7 +760,8 @@
           "json",
           "remarks",
           "settings",
-          "openSchedule"
+          "openSchedule",
+          "admin_advertisement"
         ]
       },
       "conditions": []
@@ -623,7 +792,8 @@
           "json",
           "remarks",
           "settings",
-          "openSchedule"
+          "openSchedule",
+          "admin_advertisement"
         ]
       },
       "conditions": []
@@ -648,7 +818,8 @@
           "json",
           "remarks",
           "settings",
-          "openSchedule"
+          "openSchedule",
+          "admin_advertisement"
         ]
       },
       "conditions": []

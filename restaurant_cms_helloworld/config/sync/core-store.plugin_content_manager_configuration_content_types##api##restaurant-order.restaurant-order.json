@@ -34,6 +34,21 @@
           "sortable": true
         }
       },
+      "order_state": {
+        "edit": {
+          "label": "order_state",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "pending"
+        },
+        "list": {
+          "label": "order_state",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -64,6 +79,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "state",
+        "createdAt",
+        "updatedAt"
+      ],
       "edit": [
         [
           {
@@ -72,12 +93,8 @@
           }
         ]
       ],
-      "editRelations": [],
-      "list": [
-        "id",
-        "state",
-        "createdAt",
-        "updatedAt"
+      "editRelations": [
+        "order_state"
       ]
     }
   },

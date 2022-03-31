@@ -1,14 +1,14 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::advertisement-position.advertisement-position",
+  "key": "plugin_content_manager_configuration_content_types::api::advertisement-window.advertisement-window",
   "value": {
-    "uid": "api::advertisement-position.advertisement-position",
+    "uid": "api::advertisement-window.advertisement-window",
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
-      "pageSize": 10,
-      "mainField": "position",
-      "defaultSortBy": "position",
+      "pageSize": 100,
+      "mainField": "name",
+      "defaultSortBy": "name",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -20,16 +20,46 @@
           "sortable": true
         }
       },
-      "position": {
+      "name": {
         "edit": {
-          "label": "position",
+          "label": "name",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "position",
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "admin_advertisements": {
+        "edit": {
+          "label": "admin_advertisements",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "title"
+        },
+        "list": {
+          "label": "admin_advertisements",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "restaurant_advertisement": {
+        "edit": {
+          "label": "restaurant_advertisement",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "title"
+        },
+        "list": {
+          "label": "restaurant_advertisement",
           "searchable": true,
           "sortable": true
         }
@@ -66,18 +96,21 @@
     "layouts": {
       "list": [
         "id",
-        "position",
+        "name",
         "createdAt",
         "updatedAt"
       ],
-      "editRelations": [],
       "edit": [
         [
           {
-            "name": "position",
-            "size": 6
+            "name": "name",
+            "size": 12
           }
         ]
+      ],
+      "editRelations": [
+        "admin_advertisements",
+        "restaurant_advertisement"
       ]
     }
   },

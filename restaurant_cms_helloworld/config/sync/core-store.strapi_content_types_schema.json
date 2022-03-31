@@ -1347,21 +1347,175 @@
       "plugin": "users-permissions",
       "globalId": "UsersPermissionsUser"
     },
-    "api::advertisement-position.advertisement-position": {
+    "api::admin-advertisement.admin-advertisement": {
       "kind": "collectionType",
-      "collectionName": "advertisement_positions",
+      "collectionName": "admin_advertisements",
       "info": {
-        "singularName": "advertisement-position",
-        "pluralName": "advertisement-positions",
-        "displayName": "Advertisement Position"
+        "singularName": "admin-advertisement",
+        "pluralName": "admin-advertisements",
+        "displayName": "Admin Advertisement",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "title": {
+          "type": "string"
+        },
+        "images": {
+          "type": "media",
+          "multiple": true,
+          "required": false,
+          "allowedTypes": [
+            "images",
+            "files",
+            "videos",
+            "audios"
+          ]
+        },
+        "position": {
+          "type": "integer",
+          "default": 1,
+          "required": true
+        },
+        "description": {
+          "type": "richtext"
+        },
+        "restaurants": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::restaurant.restaurant",
+          "mappedBy": "admin_advertisement"
+        },
+        "advertisement_windows": {
+          "type": "relation",
+          "relation": "manyToMany",
+          "target": "api::advertisement-window.advertisement-window",
+          "inversedBy": "admin_advertisements"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "admin_advertisements",
+        "info": {
+          "singularName": "admin-advertisement",
+          "pluralName": "admin-advertisements",
+          "displayName": "Admin Advertisement",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "title": {
+            "type": "string"
+          },
+          "images": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": [
+              "images",
+              "files",
+              "videos",
+              "audios"
+            ]
+          },
+          "position": {
+            "type": "integer",
+            "default": 1,
+            "required": true
+          },
+          "description": {
+            "type": "richtext"
+          },
+          "restaurants": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::restaurant.restaurant",
+            "mappedBy": "admin_advertisement"
+          },
+          "advertisement_windows": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::advertisement-window.advertisement-window",
+            "inversedBy": "admin_advertisements"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "admin-advertisement",
+      "connection": "default",
+      "uid": "api::admin-advertisement.admin-advertisement",
+      "apiName": "admin-advertisement",
+      "globalId": "AdminAdvertisement",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::advertisement-window.advertisement-window": {
+      "kind": "collectionType",
+      "collectionName": "advertisement_windows",
+      "info": {
+        "singularName": "advertisement-window",
+        "pluralName": "advertisement-windows",
+        "displayName": "Advertisement Window",
+        "description": ""
       },
       "options": {
         "draftAndPublish": false
       },
       "pluginOptions": {},
       "attributes": {
-        "position": {
-          "type": "string"
+        "name": {
+          "type": "string",
+          "required": false
+        },
+        "admin_advertisements": {
+          "type": "relation",
+          "relation": "manyToMany",
+          "target": "api::admin-advertisement.admin-advertisement",
+          "inversedBy": "advertisement_windows"
+        },
+        "restaurant_advertisement": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::cms-advertisement.cms-advertisement",
+          "inversedBy": "advertisement_windows"
         },
         "createdAt": {
           "type": "datetime"
@@ -1391,29 +1545,43 @@
         }
       },
       "__schema__": {
-        "collectionName": "advertisement_positions",
+        "collectionName": "advertisement_windows",
         "info": {
-          "singularName": "advertisement-position",
-          "pluralName": "advertisement-positions",
-          "displayName": "Advertisement Position"
+          "singularName": "advertisement-window",
+          "pluralName": "advertisement-windows",
+          "displayName": "Advertisement Window",
+          "description": ""
         },
         "options": {
           "draftAndPublish": false
         },
         "pluginOptions": {},
         "attributes": {
-          "position": {
-            "type": "string"
+          "name": {
+            "type": "string",
+            "required": false
+          },
+          "admin_advertisements": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::admin-advertisement.admin-advertisement",
+            "inversedBy": "advertisement_windows"
+          },
+          "restaurant_advertisement": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::cms-advertisement.cms-advertisement",
+            "inversedBy": "advertisement_windows"
           }
         },
         "kind": "collectionType"
       },
       "modelType": "contentType",
-      "modelName": "advertisement-position",
+      "modelName": "advertisement-window",
       "connection": "default",
-      "uid": "api::advertisement-position.advertisement-position",
-      "apiName": "advertisement-position",
-      "globalId": "AdvertisementPosition",
+      "uid": "api::advertisement-window.advertisement-window",
+      "apiName": "advertisement-window",
+      "globalId": "AdvertisementWindow",
       "actions": {},
       "lifecycles": {}
     },
@@ -1423,7 +1591,7 @@
       "info": {
         "singularName": "cms-advertisement",
         "pluralName": "cms-advertisements",
-        "displayName": "CMS Advertisement",
+        "displayName": "Restaurant Advertisement",
         "description": ""
       },
       "options": {
@@ -1453,6 +1621,12 @@
           "relation": "manyToMany",
           "target": "api::restaurant.restaurant",
           "mappedBy": "cms_advertisements"
+        },
+        "advertisement_windows": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::advertisement-window.advertisement-window",
+          "mappedBy": "restaurant_advertisement"
         },
         "createdAt": {
           "type": "datetime"
@@ -1486,7 +1660,7 @@
         "info": {
           "singularName": "cms-advertisement",
           "pluralName": "cms-advertisements",
-          "displayName": "CMS Advertisement",
+          "displayName": "Restaurant Advertisement",
           "description": ""
         },
         "options": {
@@ -1516,6 +1690,12 @@
             "relation": "manyToMany",
             "target": "api::restaurant.restaurant",
             "mappedBy": "cms_advertisements"
+          },
+          "advertisement_windows": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::advertisement-window.advertisement-window",
+            "mappedBy": "restaurant_advertisement"
           }
         },
         "kind": "collectionType"
@@ -1548,6 +1728,12 @@
         },
         "test": {
           "type": "json"
+        },
+        "meny_service_classes": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::meny-service-class.meny-service-class",
+          "mappedBy": "hello_table"
         },
         "createdAt": {
           "type": "datetime"
@@ -1600,6 +1786,12 @@
           },
           "test": {
             "type": "json"
+          },
+          "meny_service_classes": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::meny-service-class.meny-service-class",
+            "mappedBy": "hello_table"
           }
         },
         "kind": "collectionType"
@@ -1619,7 +1811,7 @@
       "info": {
         "singularName": "meny-service-class",
         "pluralName": "meny-service-classes",
-        "displayName": "Meny Service Class",
+        "displayName": "Restaurant Service Class",
         "description": ""
       },
       "options": {
@@ -1635,6 +1827,12 @@
           "relation": "oneToMany",
           "target": "api::restaurant.restaurant",
           "mappedBy": "meny_service_class"
+        },
+        "hello_table": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::hello-table.hello-table",
+          "inversedBy": "meny_service_classes"
         },
         "createdAt": {
           "type": "datetime"
@@ -1668,7 +1866,7 @@
         "info": {
           "singularName": "meny-service-class",
           "pluralName": "meny-service-classes",
-          "displayName": "Meny Service Class",
+          "displayName": "Restaurant Service Class",
           "description": ""
         },
         "options": {
@@ -1684,6 +1882,12 @@
             "relation": "oneToMany",
             "target": "api::restaurant.restaurant",
             "mappedBy": "meny_service_class"
+          },
+          "hello_table": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::hello-table.hello-table",
+            "inversedBy": "meny_service_classes"
           }
         },
         "kind": "collectionType"
@@ -1694,6 +1898,100 @@
       "uid": "api::meny-service-class.meny-service-class",
       "apiName": "meny-service-class",
       "globalId": "MenyServiceClass",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::order-state.order-state": {
+      "kind": "collectionType",
+      "collectionName": "order_states",
+      "info": {
+        "singularName": "order-state",
+        "pluralName": "order-states",
+        "displayName": "_Order State"
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "pending": {
+          "type": "string"
+        },
+        "bill_cleared": {
+          "type": "string"
+        },
+        "restaurant_orders": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::restaurant-order.restaurant-order",
+          "mappedBy": "order_state"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "order_states",
+        "info": {
+          "singularName": "order-state",
+          "pluralName": "order-states",
+          "displayName": "_Order State"
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "pending": {
+            "type": "string"
+          },
+          "bill_cleared": {
+            "type": "string"
+          },
+          "restaurant_orders": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::restaurant-order.restaurant-order",
+            "mappedBy": "order_state"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "order-state",
+      "connection": "default",
+      "uid": "api::order-state.order-state",
+      "apiName": "order-state",
+      "globalId": "OrderState",
       "actions": {},
       "lifecycles": {}
     },
@@ -1785,6 +2083,12 @@
         },
         "openSchedule": {
           "type": "json"
+        },
+        "admin_advertisement": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::admin-advertisement.admin-advertisement",
+          "inversedBy": "restaurants"
         },
         "createdAt": {
           "type": "datetime"
@@ -1900,6 +2204,12 @@
           },
           "openSchedule": {
             "type": "json"
+          },
+          "admin_advertisement": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::admin-advertisement.admin-advertisement",
+            "inversedBy": "restaurants"
           }
         },
         "kind": "collectionType"
@@ -2383,6 +2693,90 @@
       "actions": {},
       "lifecycles": {}
     },
+    "api::restaurant-message.restaurant-message": {
+      "kind": "collectionType",
+      "collectionName": "restaurant_messages",
+      "info": {
+        "singularName": "restaurant-message",
+        "pluralName": "restaurant-messages",
+        "displayName": "Restaurant Message",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "subject": {
+          "type": "text"
+        },
+        "body": {
+          "type": "richtext"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "restaurant_messages",
+        "info": {
+          "singularName": "restaurant-message",
+          "pluralName": "restaurant-messages",
+          "displayName": "Restaurant Message",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "subject": {
+            "type": "text"
+          },
+          "body": {
+            "type": "richtext"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "restaurant-message",
+      "connection": "default",
+      "uid": "api::restaurant-message.restaurant-message",
+      "apiName": "restaurant-message",
+      "globalId": "RestaurantMessage",
+      "actions": {},
+      "lifecycles": {}
+    },
     "api::restaurant-open-status.restaurant-open-status": {
       "kind": "collectionType",
       "collectionName": "restaurant_open_statuses",
@@ -2461,7 +2855,8 @@
       "info": {
         "singularName": "restaurant-order",
         "pluralName": "restaurant-orders",
-        "displayName": "Restaurant Orders"
+        "displayName": "Restaurant Orders",
+        "description": ""
       },
       "options": {
         "draftAndPublish": true
@@ -2470,6 +2865,12 @@
       "attributes": {
         "state": {
           "type": "string"
+        },
+        "order_state": {
+          "type": "relation",
+          "relation": "manyToOne",
+          "target": "api::order-state.order-state",
+          "inversedBy": "restaurant_orders"
         },
         "createdAt": {
           "type": "datetime"
@@ -2509,7 +2910,8 @@
         "info": {
           "singularName": "restaurant-order",
           "pluralName": "restaurant-orders",
-          "displayName": "Restaurant Orders"
+          "displayName": "Restaurant Orders",
+          "description": ""
         },
         "options": {
           "draftAndPublish": true
@@ -2518,6 +2920,12 @@
         "attributes": {
           "state": {
             "type": "string"
+          },
+          "order_state": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::order-state.order-state",
+            "inversedBy": "restaurant_orders"
           }
         },
         "kind": "collectionType"

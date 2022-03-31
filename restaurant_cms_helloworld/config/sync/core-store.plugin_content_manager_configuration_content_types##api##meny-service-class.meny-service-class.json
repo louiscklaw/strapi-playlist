@@ -49,6 +49,21 @@
           "sortable": false
         }
       },
+      "hello_table": {
+        "edit": {
+          "label": "hello_table",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "hello_table",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -79,6 +94,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "name",
+        "createdAt",
+        "updatedAt"
+      ],
       "edit": [
         [
           {
@@ -88,13 +109,8 @@
         ]
       ],
       "editRelations": [
-        "restaurants"
-      ],
-      "list": [
-        "id",
-        "name",
-        "createdAt",
-        "updatedAt"
+        "restaurants",
+        "hello_table"
       ]
     }
   },

@@ -1,14 +1,14 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::restaurant-t-and-c.restaurant-t-and-c",
+  "key": "plugin_content_manager_configuration_content_types::api::order-state.order-state",
   "value": {
-    "uid": "api::restaurant-t-and-c.restaurant-t-and-c",
+    "uid": "api::order-state.order-state",
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "name",
-      "defaultSortBy": "id",
+      "mainField": "pending",
+      "defaultSortBy": "pending",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -20,32 +20,47 @@
           "sortable": true
         }
       },
-      "detail": {
+      "pending": {
         "edit": {
-          "label": "detail",
+          "label": "pending",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "detail",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "name": {
-        "edit": {
-          "label": "name",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "name",
+          "label": "pending",
           "searchable": true,
           "sortable": true
+        }
+      },
+      "bill_cleared": {
+        "edit": {
+          "label": "bill_cleared",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "bill_cleared",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "restaurant_orders": {
+        "edit": {
+          "label": "restaurant_orders",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "state"
+        },
+        "list": {
+          "label": "restaurant_orders",
+          "searchable": false,
+          "sortable": false
         }
       },
       "createdAt": {
@@ -78,24 +93,26 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "pending",
+        "bill_cleared",
+        "createdAt"
+      ],
       "edit": [
         [
           {
-            "name": "name",
-            "size": 12
-          }
-        ],
-        [
+            "name": "pending",
+            "size": 6
+          },
           {
-            "name": "detail",
-            "size": 12
+            "name": "bill_cleared",
+            "size": 6
           }
         ]
       ],
-      "editRelations": [],
-      "list": [
-        "name",
-        "updatedAt"
+      "editRelations": [
+        "restaurant_orders"
       ]
     }
   },

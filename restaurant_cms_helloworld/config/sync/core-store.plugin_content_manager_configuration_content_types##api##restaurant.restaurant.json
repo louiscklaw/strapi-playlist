@@ -248,6 +248,21 @@
           "sortable": false
         }
       },
+      "admin_advertisement": {
+        "edit": {
+          "label": "admin_advertisement",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "title"
+        },
+        "list": {
+          "label": "admin_advertisement",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -278,6 +293,13 @@
       }
     },
     "layouts": {
+      "list": [
+        "name",
+        "address",
+        "meny_service_class",
+        "restaurant_users",
+        "advertisementConfigDisabled"
+      ],
       "edit": [
         [
           {
@@ -336,14 +358,8 @@
         "meny_service_class",
         "restaurant_users",
         "cms_advertisements",
-        "restaurant_menu"
-      ],
-      "list": [
-        "name",
-        "address",
-        "meny_service_class",
-        "restaurant_users",
-        "advertisementConfigDisabled"
+        "restaurant_menu",
+        "admin_advertisement"
       ]
     }
   },

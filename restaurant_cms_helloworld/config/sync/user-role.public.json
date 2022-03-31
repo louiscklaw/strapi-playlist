@@ -4,6 +4,189 @@
   "type": "public",
   "permissions": [
     {
+      "action": "api::cms-advertisement.cms-advertisement.create"
+    },
+    {
+      "action": "api::cms-advertisement.cms-advertisement.delete"
+    },
+    {
+      "action": "api::cms-advertisement.cms-advertisement.find"
+    },
+    {
+      "action": "api::cms-advertisement.cms-advertisement.findOne"
+    },
+    {
+      "action": "api::cms-advertisement.cms-advertisement.update"
+    },
+    {
+      "action": "api::hello-table.hello-table.create"
+    },
+    {
+      "action": "api::hello-table.hello-table.delete"
+    },
+    {
+      "action": "api::hello-table.hello-table.find"
+    },
+    {
+      "action": "api::hello-table.hello-table.findOne"
+    },
+    {
+      "action": "api::hello-table.hello-table.update"
+    },
+    {
+      "action": "api::meny-service-class.meny-service-class.create"
+    },
+    {
+      "action": "api::meny-service-class.meny-service-class.delete"
+    },
+    {
+      "action": "api::meny-service-class.meny-service-class.find"
+    },
+    {
+      "action": "api::meny-service-class.meny-service-class.findOne"
+    },
+    {
+      "action": "api::meny-service-class.meny-service-class.update"
+    },
+    {
+      "action": "api::restaurant-food-category.restaurant-food-category.create"
+    },
+    {
+      "action": "api::restaurant-food-category.restaurant-food-category.delete"
+    },
+    {
+      "action": "api::restaurant-food-category.restaurant-food-category.find"
+    },
+    {
+      "action": "api::restaurant-food-category.restaurant-food-category.findOne"
+    },
+    {
+      "action": "api::restaurant-food-category.restaurant-food-category.update"
+    },
+    {
+      "action": "api::restaurant-food-tag.restaurant-food-tag.create"
+    },
+    {
+      "action": "api::restaurant-food-tag.restaurant-food-tag.delete"
+    },
+    {
+      "action": "api::restaurant-food-tag.restaurant-food-tag.find"
+    },
+    {
+      "action": "api::restaurant-food-tag.restaurant-food-tag.findOne"
+    },
+    {
+      "action": "api::restaurant-food-tag.restaurant-food-tag.update"
+    },
+    {
+      "action": "api::restaurant-food.restaurant-food.create"
+    },
+    {
+      "action": "api::restaurant-food.restaurant-food.delete"
+    },
+    {
+      "action": "api::restaurant-food.restaurant-food.find"
+    },
+    {
+      "action": "api::restaurant-food.restaurant-food.findOne"
+    },
+    {
+      "action": "api::restaurant-food.restaurant-food.update"
+    },
+    {
+      "action": "api::restaurant-menu.restaurant-menu.create"
+    },
+    {
+      "action": "api::restaurant-menu.restaurant-menu.delete"
+    },
+    {
+      "action": "api::restaurant-menu.restaurant-menu.find"
+    },
+    {
+      "action": "api::restaurant-menu.restaurant-menu.findOne"
+    },
+    {
+      "action": "api::restaurant-menu.restaurant-menu.update"
+    },
+    {
+      "action": "api::restaurant-open-status.restaurant-open-status.create"
+    },
+    {
+      "action": "api::restaurant-open-status.restaurant-open-status.delete"
+    },
+    {
+      "action": "api::restaurant-open-status.restaurant-open-status.find"
+    },
+    {
+      "action": "api::restaurant-open-status.restaurant-open-status.findOne"
+    },
+    {
+      "action": "api::restaurant-open-status.restaurant-open-status.update"
+    },
+    {
+      "action": "api::restaurant-order.restaurant-order.create"
+    },
+    {
+      "action": "api::restaurant-order.restaurant-order.delete"
+    },
+    {
+      "action": "api::restaurant-order.restaurant-order.find"
+    },
+    {
+      "action": "api::restaurant-order.restaurant-order.findOne"
+    },
+    {
+      "action": "api::restaurant-order.restaurant-order.update"
+    },
+    {
+      "action": "api::restaurant-t-and-c.restaurant-t-and-c.create"
+    },
+    {
+      "action": "api::restaurant-t-and-c.restaurant-t-and-c.createLocalization"
+    },
+    {
+      "action": "api::restaurant-t-and-c.restaurant-t-and-c.delete"
+    },
+    {
+      "action": "api::restaurant-t-and-c.restaurant-t-and-c.find"
+    },
+    {
+      "action": "api::restaurant-t-and-c.restaurant-t-and-c.findOne"
+    },
+    {
+      "action": "api::restaurant-t-and-c.restaurant-t-and-c.update"
+    },
+    {
+      "action": "api::restaurant-user.restaurant-user.create"
+    },
+    {
+      "action": "api::restaurant-user.restaurant-user.delete"
+    },
+    {
+      "action": "api::restaurant-user.restaurant-user.find"
+    },
+    {
+      "action": "api::restaurant-user.restaurant-user.findOne"
+    },
+    {
+      "action": "api::restaurant-user.restaurant-user.update"
+    },
+    {
+      "action": "api::restaurant.restaurant.create"
+    },
+    {
+      "action": "api::restaurant.restaurant.delete"
+    },
+    {
+      "action": "api::restaurant.restaurant.find"
+    },
+    {
+      "action": "api::restaurant.restaurant.findOne"
+    },
+    {
+      "action": "api::restaurant.restaurant.update"
+    },
+    {
       "action": "plugin::users-permissions.auth.callback"
     },
     {

@@ -1,13 +1,13 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::restaurant-t-and-c.restaurant-t-and-c",
+  "key": "plugin_content_manager_configuration_content_types::api::restaurant-message.restaurant-message",
   "value": {
-    "uid": "api::restaurant-t-and-c.restaurant-t-and-c",
+    "uid": "api::restaurant-message.restaurant-message",
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "name",
+      "mainField": "id",
       "defaultSortBy": "id",
       "defaultSortOrder": "ASC"
     },
@@ -20,32 +20,32 @@
           "sortable": true
         }
       },
-      "detail": {
+      "subject": {
         "edit": {
-          "label": "detail",
+          "label": "subject",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "detail",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "name": {
-        "edit": {
-          "label": "name",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "name",
+          "label": "subject",
           "searchable": true,
           "sortable": true
+        }
+      },
+      "body": {
+        "edit": {
+          "label": "body",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "body",
+          "searchable": false,
+          "sortable": false
         }
       },
       "createdAt": {
@@ -78,25 +78,27 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "subject",
+        "createdAt",
+        "updatedAt"
+      ],
       "edit": [
         [
           {
-            "name": "name",
-            "size": 12
+            "name": "subject",
+            "size": 6
           }
         ],
         [
           {
-            "name": "detail",
+            "name": "body",
             "size": 12
           }
         ]
       ],
-      "editRelations": [],
-      "list": [
-        "name",
-        "updatedAt"
-      ]
+      "editRelations": []
     }
   },
   "type": "object",
