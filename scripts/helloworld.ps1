@@ -1,3 +1,5 @@
-Remove-Item -Force -Recurse  $args
+# npx kill-port 1337
 
-npx create-strapi-app@latest $args --quickstart
+Remove-Item -Force -Recurse  helloworld
+
+npx create-strapi-app helloworld --quickstart
