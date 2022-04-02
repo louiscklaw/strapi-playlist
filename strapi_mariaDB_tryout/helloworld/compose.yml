@@ -26,3 +26,11 @@ services:
       MYSQL_DATABASE: strapi
       MYSQL_USER: strapi
       MYSQL_PASSWORD: strapi
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
