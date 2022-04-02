@@ -33,4 +33,5 @@ services:
     ports:
       - 8080:80
     environment:
+      - PMA_HOSTS=mariadb
       - PMA_ARBITRARY=1
