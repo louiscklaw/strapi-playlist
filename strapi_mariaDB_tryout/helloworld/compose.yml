@@ -1,6 +1,7 @@
 version: "3"
 services:
   strapi:
+    restart: always
     image: strapi/strapi
     environment:
       DATABASE_CLIENT: mysql
@@ -18,6 +19,7 @@ services:
       - mariadb
 
   mariadb:
+    restart: always
     image: mariadb
     volumes:
       - ./data:/var/lib/mysql
@@ -28,8 +30,8 @@ services:
       MYSQL_PASSWORD: strapi
 
   phpmyadmin:
-    image: phpmyadmin
     restart: always
+    image: phpmyadmin
     ports:
       - 8080:80
     environment:
