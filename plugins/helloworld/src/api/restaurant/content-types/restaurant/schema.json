@@ -4,21 +4,17 @@
   "info": {
     "singularName": "restaurant",
     "pluralName": "restaurants",
-    "displayName": "Restaurant "
+    "displayName": "Restaurant ",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
-    "description": {
-      "type": "string"
-    },
+    "aaaa": { "type": "string", "required": true, "unique": true },
+    "name": { "type": "string", "required": true, "unique": true },
+    "description": { "type": "string" },
     "categories": {
       "type": "relation",
       "relation": "manyToMany",
