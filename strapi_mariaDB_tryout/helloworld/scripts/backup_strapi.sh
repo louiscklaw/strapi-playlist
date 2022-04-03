@@ -1,0 +1,1 @@
+docker-compose exec strapi strapi configuration:dump > _backup/strapi_config.json
