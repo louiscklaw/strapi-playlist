@@ -7,13 +7,15 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
+    "test_client": "http-server ./client",
     "strapi": "strapi"
   },
   "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.1.5",
-    "@strapi/plugin-users-permissions": "4.1.5",
     "@strapi/plugin-i18n": "4.1.5",
+    "@strapi/plugin-users-permissions": "4.1.5",
+    "@strapi/strapi": "4.1.5",
+    "http-server": "^14.1.0",
     "sqlite3": "5.0.2"
   },
   "author": {
