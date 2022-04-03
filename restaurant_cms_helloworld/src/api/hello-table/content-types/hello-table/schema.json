@@ -23,6 +23,10 @@
       "relation": "oneToMany",
       "target": "api::meny-service-class.meny-service-class",
       "mappedBy": "hello_table"
+    },
+    "test_uid": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }
