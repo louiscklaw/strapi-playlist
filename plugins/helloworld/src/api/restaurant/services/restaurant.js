@@ -14,6 +14,8 @@ module.exports = createCoreService(
       // Calling the default core controller
       const { results, pagination } = await super.find(...args);
 
+      console.log("createCoreService", JSON.stringify(args));
+
       // some custom logic
       results.forEach((result) => {
         result.counter = 1;

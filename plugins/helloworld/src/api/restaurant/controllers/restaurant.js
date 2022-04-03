@@ -14,6 +14,8 @@ module.exports = createCoreController(
       // Calling the default core action
       const { data, meta } = await super.find(ctx);
 
+      console.log("createCoreController", JSON.stringify(ctx));
+
       // some more custom logic
       meta.date = Date.now();
 
