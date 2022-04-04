@@ -7,7 +7,7 @@ module.exports = {
         contentType: "article",
         action: "create",
         content: result,
-        // author: {},
+        author: {},
       },
     });
   },
