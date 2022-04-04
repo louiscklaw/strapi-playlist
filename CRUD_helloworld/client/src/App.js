@@ -5,6 +5,8 @@ import axios from "axios";
 import React from "react";
 
 function App() {
+  const [jwt_token, setJwtToken] = React.useState(null);
+  const [test_data, setTestData] = React.useState(null);
   const [username_login, setUsernameLogin] = React.useState("test1@test.com");
   const [password_login, setPasswordLogin] = React.useState("test1@test.com");
   const checkLogin = () => {
@@ -16,6 +18,7 @@ function App() {
       .then((response) => {
         console.log("User profile", response.data.user);
         console.log("User token", response.data.jwt);
+        setJwtToken(response.data.jwt);
       })
       .catch((error) => {
         console.log("An error occurred:", error.response);
@@ -72,9 +75,38 @@ function App() {
       });
   };
 
+  const onCreateClick = () => {
+    console.log("onCreateClick");
+    axios
+      .post(
+        "http://localhost:1337/api/articles",
+        { data: { title: test_data } },
+        { Authorization: `Bearer ${jwt_token}` }
+      )
+      .then((response) => {
+        console.log({ done: response });
+      })
+      .catch((error) => {
+        console.log("An error occurred:", error.response);
+      });
+  };
+  const onReadClick = () => {
+    console.log("onReadClick");
+  };
+  const onUpdateClick = () => {
+    console.log("onUpdateClick");
+  };
+  const onDeleteClick = () => {
+    console.log("onDeleteClick");
+  };
+
   return (
     <div className="App">
-      <div>helloworld</div>
+      <div>CRUD_helloworld</div>
+      <div>
+        <div>active_jwt</div>
+        <pre>{jwt_token}</pre>
+      </div>
 
       <div style={{ padding: "1rem" }}>
         <input
@@ -132,6 +164,25 @@ function App() {
         <button onClick={(e) => resetPassword(e.target.value)}>
           resetPassword
         </button>
+      </div>
+
+      <div style={{ padding: "1rem" }}>
+        <div>CRUD helloworld</div>
+        <div>
+          <input type="text" onChange={(e) => setTestData(e.target.value)} />
+        </div>
+        <div>
+          <button onClick={(e) => onCreateClick(e)}>create</button>
+        </div>
+        <div>
+          <button onClick={(e) => onReadClick(e)}>read</button>
+        </div>
+        <div>
+          <button onClick={(e) => onUpdateClick(e)}>update</button>
+        </div>
+        <div>
+          <button onClick={(e) => onDeleteClick(e)}>delete</button>
+        </div>
       </div>
     </div>
   );

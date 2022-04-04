@@ -1,4 +1,4 @@
 
 yarn --dev
 
-yarn develop
+yarn start
