@@ -86,12 +86,12 @@ async function seed() {
     console.log(`Failed to move ${uploadDataPath} to  ${uploadPath}`);
   }
 
-  try {
-    await fse.remove(dataPath);
-    await fse.remove(uploadDataPath);
-  } catch (err) {
-    console.log(`Failed to remove ${dataPath}`);
-  }
+  // try {
+  //   await fse.remove(dataPath);
+  //   await fse.remove(uploadDataPath);
+  // } catch (err) {
+  //   console.log(`Failed to remove ${dataPath}`);
+  // }
 
   await fse.ensureFile(dotEnv);
   const dotEnvData = fse.readFileSync(dotEnv).toString();
