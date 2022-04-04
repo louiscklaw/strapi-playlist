@@ -66,6 +66,45 @@ async function seed() {
     console.log(`Failed to remove ${uploadPath}`);
   }
 
+  await new Promise((resolve) => {
+    fse
+      .createReadStream(zipPath)
+      .pipe(unzip.Extract({ path: "." }))
+      .on("close", resolve);
+  });
+
+  try {
+    await dumpSqlite();
+  } catch (err) {
+    console.log(`Failed sqlite dump ${err.message}`);
+  }
+
+  try {
+    await fse.removeSync(uploadPath);
+    await fse.copySync(uploadDataPath, uploadPath);
+  } catch (err) {
+    console.log(`Failed to move ${uploadDataPath} to  ${uploadPath}`);
+  }
+
+  try {
+    await fse.remove(dataPath);
+    await fse.remove(uploadDataPath);
+  } catch (err) {
+    console.log(`Failed to remove ${dataPath}`);
+  }
+
+  await fse.ensureFile(dotEnv);
+  const dotEnvData = fse.readFileSync(dotEnv).toString();
+  if (!dotEnvData.includes("ADMIN_JWT_SECRET")) {
+    try {
+      await fse.appendFile(
+        dotEnv,
+        `ADMIN_JWT_SECRET=${crypto.randomBytes(64).toString("base64")}\n`
+      );
+    } catch (err) {
+      console.log(`Failed to create ${dotEnv}`);
+    }
+  }
 }
 
 seed().catch((error) => {
