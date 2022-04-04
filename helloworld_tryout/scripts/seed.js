@@ -47,7 +47,19 @@ async function updateUid() {
   }
 }
 
-async function seed() {}
+async function seed() {
+  try {
+    await updateUid();
+  } catch (error) {
+    console.log(error);
+  }
+
+  try {
+    await fse.emptyDir(tmpPath);
+  } catch (err) {
+    console.log(`Failed to remove ${tmpPath}`);
+  }
+}
 
 seed().catch((error) => {
   console.error(error);
