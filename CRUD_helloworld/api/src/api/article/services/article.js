@@ -1,9 +1,11 @@
-'use strict';
+const { createCoreService } = require("@strapi/strapi").factories;
 
-/**
- * article service.
- */
+console.log("service init");
 
-const { createCoreService } = require('@strapi/strapi').factories;
+module.exports = createCoreService("api::article.article", ({ strapi }) => ({
+  async helloService() {
+    console.log("helloService");
 
-module.exports = createCoreService('api::article.article');
+    return false;
+  },
+}));

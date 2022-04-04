@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "histories",
+  "info": {
+    "singularName": "history",
+    "pluralName": "histories",
+    "displayName": "history",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "message": {
+      "type": "text"
+    },
+    "raw_json": {
+      "type": "json"
+    },
+    "raw_result": {
+      "type": "json"
+    },
+    "raw_params": {
+      "type": "json"
+    }
+  }
+}
