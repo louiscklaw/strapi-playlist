@@ -11,7 +11,8 @@
     "seed": "node scripts/seed.js"
   },
   "devDependencies": {
-    "unzip-stream": "^0.3.1"
+    "unzip-stream": "^0.3.1",
+    "uuid-v4": "^0.1.0"
   },
   "dependencies": {
     "@strapi/plugin-i18n": "4.1.5",

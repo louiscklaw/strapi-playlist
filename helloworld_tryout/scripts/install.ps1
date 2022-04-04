@@ -1,1 +1,2 @@
-yarn add -D unzip-stream
+# seed.js
+yarn add -D unzip-stream uuid-v4

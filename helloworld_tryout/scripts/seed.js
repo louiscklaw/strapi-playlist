@@ -24,7 +24,28 @@ async function dumpSqlite() {
   await util.promisify(db.close).bind(db);
 }
 
-async function updateUid() {}
+async function updateUid() {
+  const filePath = `./package.json`;
+
+  try {
+    if (fse.existsSync(filePath)) {
+      const rawFile = fse.readFileSync(filePath);
+      const packageJSON = JSON.parse(rawFile);
+
+      if (packageJSON.strapi.uuid.includes("FOODADVISOR")) return null;
+
+      packageJSON.strapi.uuid =
+        `FOODADVISOR-${
+          process.env.GITPOD_WORKSPACE_URL ? "GITPOD-" : "LOCAL-"
+        }` + uuid();
+
+      const data = JSON.stringify(packageJSON, null, 2);
+      fse.writeFileSync(filePath, data);
+    }
+  } catch (e) {
+    console.error(e);
+  }
+}
 
 async function seed() {}
 
