@@ -9,13 +9,7 @@ module.exports = {
   },
   afterCreate(event) {
     const { result, params } = event;
-    strapi.service("api::history.history").create({
-      data: {
-        message: "hello log",
-        raw_result: result,
-        raw_params: params,
-      },
-    });
+
     console.log("afterCreate");
   },
   afterCreateMany(event) {

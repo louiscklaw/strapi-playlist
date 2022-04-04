@@ -95,7 +95,7 @@ function App() {
       .post(
         "http://localhost:1337/api/articles",
         { data: { title: test_data } },
-        { Authorization: `Bearer ${jwt_token}` }
+        { headers: { Authorization: `Bearer ${jwt_token}` } }
       )
       .then((response) => {
         console.log({ done: response });
@@ -158,6 +158,23 @@ function App() {
       .catch((error) => {
         console.log("An error occurred:", error.response);
       });
+  };
+
+  const userSelfCheck = () => {
+    axios
+      .get(`http://localhost:1337/api/users/me`, {
+        Authorization: `Bearer ${jwt_token}`,
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log("An error occurred:", error.response);
+      });
+  };
+
+  const userLogout = () => {
+    setJwtToken("");
   };
 
   return (
@@ -224,6 +241,10 @@ function App() {
         <button onClick={(e) => resetPassword(e.target.value)}>
           resetPassword
         </button>
+      </div>
+
+      <div style={{ padding: "1rem" }}>
+        <button onClick={(e) => userLogout(e.target.value)}>logout</button>
       </div>
 
       <div style={{ padding: "1rem" }}>
