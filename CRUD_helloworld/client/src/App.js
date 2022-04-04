@@ -19,6 +19,8 @@ function App() {
   const [id_to_delete, setIdToDelete] = React.useState(null);
   const [delete_response, setDeleteResponse] = React.useState();
 
+  const [list_response, setListResponse] = React.useState();
+
   const [username_login, setUsernameLogin] = React.useState("test1@test.com");
   const [password_login, setPasswordLogin] = React.useState("test1@test.com");
   const checkLogin = () => {
@@ -144,6 +146,20 @@ function App() {
       });
   };
 
+  const onListClick = () => {
+    console.log("onListClick");
+    axios
+      .get(`http://localhost:1337/api/articles`, {
+        Authorization: `Bearer ${jwt_token}`,
+      })
+      .then((response) => {
+        setListResponse(JSON.stringify(response, null, 2));
+      })
+      .catch((error) => {
+        console.log("An error occurred:", error.response);
+      });
+  };
+
   return (
     <div className="App">
       <div>CRUD_helloworld</div>
@@ -236,6 +252,11 @@ function App() {
 
           <button onClick={(e) => onDeleteClick(e)}>delete</button>
           <pre>{delete_response}</pre>
+        </div>
+
+        <div>
+          <button onClick={(e) => onListClick(e)}>list</button>
+          <pre>{list_response}</pre>
         </div>
       </div>
     </div>
