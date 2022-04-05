@@ -4,7 +4,8 @@
   "info": {
     "singularName": "food-category",
     "pluralName": "food-categories",
-    "displayName": "food category"
+    "displayName": "food category",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "foods": {
       "type": "relation",
