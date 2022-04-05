@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurant_advertisements",
+  "info": {
+    "singularName": "restaurant-advertisement",
+    "pluralName": "restaurant-advertisements",
+    "displayName": "restaurant advertisement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
