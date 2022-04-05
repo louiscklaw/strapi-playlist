@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "food_set_categories",
+  "info": {
+    "singularName": "food-set-category",
+    "pluralName": "food-set-categories",
+    "displayName": "food set category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "food_sets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::food-set.food-set",
+      "inversedBy": "food_set_categories"
+    },
+    "position": {
+      "type": "integer",
+      "unique": true
+    }
+  }
+}

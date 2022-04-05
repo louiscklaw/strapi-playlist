@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "food_categories",
+  "info": {
+    "singularName": "food-category",
+    "pluralName": "food-categories",
+    "displayName": "food category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "foods": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::food.food",
+      "mappedBy": "food_categories"
+    }
+  }
+}

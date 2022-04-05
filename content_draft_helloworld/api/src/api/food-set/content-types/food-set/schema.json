@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "food_sets",
+  "info": {
+    "singularName": "food-set",
+    "pluralName": "food-sets",
+    "displayName": "food set",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "foods": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::food.food",
+      "mappedBy": "food_sets"
+    },
+    "food_set_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::food-set-category.food-set-category",
+      "mappedBy": "food_sets"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
