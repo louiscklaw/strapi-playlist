@@ -1,4 +1,5 @@
 git add .
-git commit -m"update Authentication\helloworld_tryout,"
+git commit -m"update SEO_helloworld,"
+
 git pull
 git push

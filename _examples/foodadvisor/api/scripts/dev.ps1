@@ -4,5 +4,8 @@ npx kill-port 1337
 
 yarn --dev
 
+# yarn build
+
 yarn seed
+
 yarn develop

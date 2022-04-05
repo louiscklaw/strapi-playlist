@@ -8,7 +8,7 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "seed": "node script/seed.js"
+    "seed": "node scripts/seed.js"
   },
   "devDependencies": {},
   "dependencies": {
@@ -28,7 +28,7 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "FOODADVISOR-LOCAL-da6a22e8-e8f7-41e6-a3af-ba054514b9c7"
+    "uuid": "FOODADVISOR-LOCAL-75cd1832-7392-460e-a6ec-157e5c98c763"
   },
   "engines": {
     "node": ">=12.x.x <=16.x.x",

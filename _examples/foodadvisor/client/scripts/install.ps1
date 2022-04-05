@@ -1,1 +1,4 @@
-yarn add nodemailer-ntlm-auth
+# seed.js
+# yarn add -D unzip-stream uuid-v4
+
+yarn add @strapi/plugin-seo
