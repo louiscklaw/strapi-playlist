@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurant_messages",
+  "info": {
+    "singularName": "restaurant-message",
+    "pluralName": "restaurant-messages",
+    "displayName": "restaurant-message"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "body": {
+      "type": "richtext",
+      "default": "helloworld",
+      "required": true
+    }
+  }
+}

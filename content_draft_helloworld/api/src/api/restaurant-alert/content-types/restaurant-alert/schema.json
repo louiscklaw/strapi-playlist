@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurant_alerts",
+  "info": {
+    "singularName": "restaurant-alert",
+    "pluralName": "restaurant-alerts",
+    "displayName": "restaurant alert",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "hello title"
+    },
+    "detail": {
+      "type": "text"
+    }
+  }
+}
