@@ -4,7 +4,8 @@
   "info": {
     "singularName": "log",
     "pluralName": "logs",
-    "displayName": "log"
+    "displayName": "log",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -13,6 +14,12 @@
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "detail": {
+      "type": "text"
+    },
+    "raw_json": {
+      "type": "json"
     }
   }
 }

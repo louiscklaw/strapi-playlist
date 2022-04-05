@@ -176,6 +176,12 @@
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "inversedBy": "restaurants"
+    },
+    "restaurant_messages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::restaurant-message.restaurant-message",
+      "inversedBy": "restaurants"
     }
   }
 }

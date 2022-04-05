@@ -4,7 +4,8 @@
   "info": {
     "singularName": "restaurant-message",
     "pluralName": "restaurant-messages",
-    "displayName": "restaurant-message"
+    "displayName": "restaurant-message",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,6 +19,12 @@
       "type": "richtext",
       "default": "helloworld",
       "required": true
+    },
+    "restaurants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::restaurant.restaurant",
+      "inversedBy": "restaurant_messages"
     }
   }
 }
