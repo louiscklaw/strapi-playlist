@@ -21,6 +21,12 @@
       "relation": "manyToMany",
       "target": "api::food.food",
       "mappedBy": "food_categories"
+    },
+    "show_user": {
+      "type": "boolean"
+    },
+    "publish_at": {
+      "type": "datetime"
     }
   }
 }

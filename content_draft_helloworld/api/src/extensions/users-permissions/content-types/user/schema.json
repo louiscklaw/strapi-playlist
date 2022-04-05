@@ -99,7 +99,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::restaurant.restaurant",
-      "inversedBy": "restaurant_operators"
+      "mappedBy": "restaurant_operators"
     }
   }
 }

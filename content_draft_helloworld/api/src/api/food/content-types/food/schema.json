@@ -80,6 +80,34 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::food-customize-option.food-customize-option"
+    },
+    "show_user": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean"
+    },
+    "publish_at": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "datetime",
+      "default": "2020-03-31T16:00:00.000Z",
+      "required": true
+    },
+    "sold_out": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }
