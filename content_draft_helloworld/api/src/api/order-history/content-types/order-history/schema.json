@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_histories",
+  "info": {
+    "singularName": "order-history",
+    "pluralName": "order-histories",
+    "displayName": "Order history"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

@@ -171,7 +171,7 @@
       "target": "api::restaurant-review.restaurant-review",
       "mappedBy": "restaurant"
     },
-    "users_permissions_users": {
+    "restaurant_operators": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
