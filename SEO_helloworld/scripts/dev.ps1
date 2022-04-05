@@ -2,10 +2,6 @@
 # taskkill /PID <PID> /F
 npx kill-port 1337
 
-# Remove-item -Recurse -Force .cache .tmp build
+yarn --dev
 
-# yarn build
 yarn develop
-
-# yarn cs import
-
