@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_ratings",
+  "info": {
+    "displayName": "rating",
+    "icon": "heart"
+  },
+  "options": {},
+  "attributes": {
+    "taste": {
+      "type": "float"
+    },
+    "environment": {
+      "type": "float"
+    },
+    "service": {
+      "type": "float"
+    },
+    "hyginene": {
+      "type": "float"
+    }
+  }
+}

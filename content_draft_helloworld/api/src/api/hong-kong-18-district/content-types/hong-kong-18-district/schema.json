@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hong_kong_18_districts",
+  "info": {
+    "singularName": "hong-kong-18-district",
+    "pluralName": "hong-kong-18-districts",
+    "displayName": "hong kong 18 district",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}
