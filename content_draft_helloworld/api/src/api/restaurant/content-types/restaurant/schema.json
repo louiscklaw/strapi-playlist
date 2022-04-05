@@ -170,6 +170,12 @@
       "relation": "oneToMany",
       "target": "api::restaurant-review.restaurant-review",
       "mappedBy": "restaurant"
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "restaurants"
     }
   }
 }

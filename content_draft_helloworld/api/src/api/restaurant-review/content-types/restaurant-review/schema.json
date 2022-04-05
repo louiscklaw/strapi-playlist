@@ -28,7 +28,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "restaurant_review"
+      "mappedBy": "restaurant_review"
     }
   }
 }

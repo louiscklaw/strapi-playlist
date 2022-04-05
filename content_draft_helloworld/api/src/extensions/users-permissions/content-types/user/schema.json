@@ -76,23 +76,30 @@
       "mappedBy": "author"
     },
     "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "job": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "restaurant_review": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::restaurant-review.restaurant-review",
       "inversedBy": "author"
+    },
+    "restaurants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::restaurant.restaurant",
+      "inversedBy": "users_permissions_users"
     }
   }
 }
