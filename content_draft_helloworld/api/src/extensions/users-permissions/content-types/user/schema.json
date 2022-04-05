@@ -87,6 +87,12 @@
     "job": {
       "type": "string",
       "required": true
+    },
+    "restaurant_review": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::restaurant-review.restaurant-review",
+      "inversedBy": "author"
     }
   }
 }

@@ -164,6 +164,12 @@
       "relation": "manyToMany",
       "target": "api::restaurant-tag.restaurant-tag",
       "inversedBy": "restaurants"
+    },
+    "restaurant_reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::restaurant-review.restaurant-review",
+      "mappedBy": "restaurant"
     }
   }
 }
