@@ -75,6 +75,11 @@
         }
       },
       "type": "decimal"
+    },
+    "food_customize_options": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::food-customize-option.food-customize-option"
     }
   }
 }

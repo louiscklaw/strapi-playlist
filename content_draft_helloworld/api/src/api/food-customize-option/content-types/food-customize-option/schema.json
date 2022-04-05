@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "food_customize_options",
+  "info": {
+    "singularName": "food-customize-option",
+    "pluralName": "food-customize-options",
+    "displayName": "food customize option",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
