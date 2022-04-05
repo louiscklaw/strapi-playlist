@@ -35,13 +35,13 @@ function App() {
 
   const [list_response, setListResponse] = React.useState({});
 
-  const [username_login, setUsernameLogin] = React.useState('test1@test.com');
-  const [password_login, setPasswordLogin] = React.useState('test1@test.com');
+  const [username_login, setUsernameLogin] = React.useState('hw@gmail.com');
+  const [password_login, setPasswordLogin] = React.useState('Aa1234567');
   const checkLogin = () => {
     axios
-      .post('http://localhost:1337/api/auth/local', {
-        identifier: username_login,
-        password: password_login,
+      .post(`http://localhost:1337/api/auth/local`, {
+        identifier: 'hw@gmail.com',
+        password: 'Aa1234567',
       })
       .then((response) => {
         console.log('User profile', response.data.user);
@@ -108,7 +108,13 @@ function App() {
     const json_list = JSON.parse(json_payload);
     json_list.forEach((json_item) => {
       axios
-        .post(`${target_endpoint}${api_endpoint}`, { data: json_item })
+        .post(
+          `${target_endpoint}${api_endpoint}`,
+          { data: json_item },
+          {
+            Authorization: `Bearer ${jwt_token}`,
+          }
+        )
         .then((response) => {
           console.log('Created', response.data);
         })
@@ -177,7 +183,9 @@ function App() {
   const onListClick = () => {
     console.log('onListClick');
     return axios
-      .get(`${target_endpoint}${api_endpoint}`)
+      .get(`${target_endpoint}${api_endpoint}`, {
+        Authorization: `Bearer ${jwt_token}`,
+      })
       .then((response) => {
         setListResponse(JSON.stringify(response, null, 2));
       })
@@ -205,6 +213,28 @@ function App() {
 
   return (
     <div className="App">
+      <div>{jwt_token}</div>
+      <input
+        onChange={(e) => {
+          setUsernameLogin(e.target.value);
+        }}
+        value={username_login}
+      />
+      <input
+        onChange={(e) => {
+          setPasswordLogin(e.target.value);
+        }}
+        value={password_login}
+      />
+
+      <button
+        onClick={(e) => {
+          checkLogin(e);
+        }}
+      >
+        Login
+      </button>
+
       <div>batch_add_helloworld</div>
       <div style={{ padding: '1rem' }}>
         <input
@@ -256,7 +286,7 @@ function App() {
         >
           list helloworld
         </button>
-        <pre>{list_response}</pre>
+        <pre>{'list_response'}</pre>
       </div>
     </div>
   );
