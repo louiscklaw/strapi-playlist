@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * log service.
+ * app-log service.
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::log.log');
+module.exports = createCoreService('api::app-log.app-log');
