@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_shared_shorten_urls",
+  "info": {
+    "displayName": "Shorten URL",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "count_down": {
+      "type": "integer"
+    },
+    "error": {
+      "type": "boolean"
+    },
+    "publish_at": {
+      "type": "datetime",
+      "default": "1972-03-31T16:00:00.000Z",
+      "required": true
+    },
+    "ended_at": {
+      "type": "datetime"
+    },
+    "remarks": {
+      "type": "text"
+    }
+  }
+}
