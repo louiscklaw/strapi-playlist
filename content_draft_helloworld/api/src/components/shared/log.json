@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_logs",
+  "info": {
+    "displayName": "log",
+    "icon": "book-open"
+  },
+  "options": {},
+  "attributes": {
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "INFO",
+        "DEBUG",
+        "ERROR"
+      ],
+      "required": true,
+      "default": "INFO"
+    },
+    "message": {
+      "type": "text"
+    },
+    "log_at": {
+      "type": "datetime"
+    }
+  }
+}
