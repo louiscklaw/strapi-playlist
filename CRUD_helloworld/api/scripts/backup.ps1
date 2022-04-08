@@ -4,7 +4,7 @@
 # sqlite> .dump
 # sqlite> .exit
 
-sqlite3.exe D:\_workspace\strapi-playlist\restaurant_cms_helloworld\.tmp\data.db `
+sqlite3.exe .tmp\data.db `
   ".output data/dump.sql" `
   ".dump" `
   ".exit"
