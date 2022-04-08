@@ -4,6 +4,14 @@ import "./App.css";
 import axios from "axios";
 import React from "react";
 
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  useQuery,
+  gql,
+} from "@apollo/client";
+
 function App() {
   const [jwt_token, setJwtToken] = React.useState(null);
 
@@ -179,7 +187,8 @@ function App() {
 
   return (
     <div className="App">
-      <div>CRUD_helloworld</div>
+      <div>GraphQl_helloworld</div>
+
       <div>
         <div>active_jwt</div>
         <pre>{jwt_token}</pre>
@@ -248,7 +257,7 @@ function App() {
       </div>
 
       <div style={{ padding: "1rem" }}>
-        <div>CRUD helloworld</div>
+        <div>GraphQl helloworld</div>
         <div>
           <div>
             <input type="text" onChange={(e) => setTestData(e.target.value)} />
