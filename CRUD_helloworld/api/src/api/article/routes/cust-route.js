@@ -17,6 +17,9 @@ module.exports = {
 
         middlewares: [
           (ctx, next) => {
+            // const { userId } = ctx.params;
+            // console.log({ userId });
+
             console.log("middleware");
             return next();
           },
