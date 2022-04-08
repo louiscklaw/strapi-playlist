@@ -11,6 +11,9 @@ import GqlQueryAlias from "./components/GqlQueryAlias";
 import GqlFragments from "./components/GqlFragments";
 import UsingVariablesInsideFragments from "./components/UsingVariablesInsideFragments";
 import GraphQLFilter from "./components/GraphQLFilter";
+import GqlMutationCreate from "./components/GqlMutationCreate";
+import GqlMutationUpdate from "./components/GqlMutationUpdate";
+import GqlMutationDelete from "./components/GqlMutationDelete";
 
 const client = new ApolloClient({
   uri: "http://localhost:1337/graphql",
@@ -39,6 +42,15 @@ ReactDOM.render(
       </div>{" "}
       <div>
         <GraphQLFilter />
+      </div>{" "}
+      <div>
+        <GqlMutationCreate />
+      </div>{" "}
+      <div>
+        <GqlMutationUpdate />
+      </div>{" "}
+      <div>
+        <GqlMutationDelete />
       </div>
       <App />
     </ApolloProvider>

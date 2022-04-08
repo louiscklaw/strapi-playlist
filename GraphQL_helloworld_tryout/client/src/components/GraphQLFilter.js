@@ -2,12 +2,19 @@ import { ApolloClient, InMemoryCache, useQuery, gql } from "@apollo/client";
 
 const EXCHANGE_RATES = gql`
   query {
-    restaurants(filters: { name: { eq: "client1 restaurant" } }) {
+    restaurants(filters: { description: { eq: "client1 restaurant" } }) {
       data {
         id
         attributes {
           name
           description
+          test_content_1s(filters: { title: { eq: "conten2" } }) {
+            data {
+              attributes {
+                title
+              }
+            }
+          }
         }
       }
     }
