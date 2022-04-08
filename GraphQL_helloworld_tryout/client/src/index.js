@@ -4,46 +4,42 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-import {
-  ApolloProvider,
-  ApolloClient,
-  InMemoryCache,
-  useQuery,
-  gql,
-} from "@apollo/client";
+import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+import GraphQLHelloworld from "./components/GraphQLHelloworld";
+import GqlQueryArguments from "./components/GqlQueryArguments";
+import GqlQueryAlias from "./components/GqlQueryAlias";
+import GqlFragments from "./components/GqlFragments";
+import UsingVariablesInsideFragments from "./components/UsingVariablesInsideFragments";
+import GraphQLFilter from "./components/GraphQLFilter";
 
 const client = new ApolloClient({
   uri: "http://localhost:1337/graphql",
   cache: new InMemoryCache(),
 });
 
-const EXCHANGE_RATES = gql`
-  query Restaurants {
-    restaurants {
-      data {
-        id
-        attributes {
-          name
-          description
-        }
-      }
-    }
-  }
-`;
-
-function ExchangeRates() {
-  const { loading, error, data } = useQuery(EXCHANGE_RATES);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
-
-  return <>{JSON.stringify(data)}</>;
-}
-
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <ExchangeRates />
+      <GraphQLHelloworld />
+      <div>
+        <div>GqlQueryArguments</div>
+        <GqlQueryArguments />
+      </div>{" "}
+      <div>
+        <div>GqlQueryAlias</div>
+        <GqlQueryAlias />
+      </div>{" "}
+      <div>
+        <div>GqlFragments</div>
+        <GqlFragments />
+      </div>{" "}
+      <div>
+        <div>UsingVariablesInsideFragments</div>
+        <UsingVariablesInsideFragments />
+      </div>{" "}
+      <div>
+        <GraphQLFilter />
+      </div>
       <App />
     </ApolloProvider>
   </React.StrictMode>,

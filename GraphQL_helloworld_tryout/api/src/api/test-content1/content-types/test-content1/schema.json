@@ -14,6 +14,12 @@
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "restaurant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::restaurant.restaurant",
+      "inversedBy": "test_content_1s"
     }
   }
 }
