@@ -4,6 +4,9 @@ import styles from "../styles/Home.module.css";
 
 import { gql } from "@apollo/client";
 import client from "../apollo-client";
+import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+
+import TestUseQuery from "../components/TestUseQuery";
 
 export async function getStaticProps() {
   const { data } = await client.query({
@@ -29,5 +32,15 @@ export async function getStaticProps() {
 }
 
 export default function Home({ countries }) {
-  return <pre>{JSON.stringify(countries, null, 2)}</pre>;
+  return (
+    <>
+      <ApolloProvider client={client}>
+        <div>
+          <TestUseQuery />
+        </div>
+        <pre>{JSON.stringify(countries, null, 2)}</pre>
+      </ApolloProvider>
+      );
+    </>
+  );
 }
