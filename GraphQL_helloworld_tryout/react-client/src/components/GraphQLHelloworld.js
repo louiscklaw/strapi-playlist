@@ -7,7 +7,6 @@ const EXCHANGE_RATES = gql`
         id
         attributes {
           name
-          description
         }
       }
     }
