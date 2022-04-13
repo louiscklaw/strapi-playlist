@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_images",
+  "info": {
+    "displayName": "images",
+    "icon": "images",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

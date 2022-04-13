@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_content1s",
+  "info": {
+    "singularName": "test-content1",
+    "pluralName": "test-content1s",
+    "displayName": "test_content1",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "restaurant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::restaurant.restaurant",
+      "inversedBy": "test_content_1s"
+    },
+    "test_base64": {
+      "type": "text"
+    },
+    "test_images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
