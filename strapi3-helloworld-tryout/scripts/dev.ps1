@@ -2,6 +2,12 @@
 # taskkill /PID <PID> /F
 npx kill-port 1337
 
-yarn --dev
+yarn --ignore-engines --dev
 
-yarn develop
+remove-item -R -Force .cache
+remove-item -R -Force .tmp
+remove-item -R -Force build
+timeout 3
+
+yarn --ignore-engines build
+yarn --ignore-engines develop
