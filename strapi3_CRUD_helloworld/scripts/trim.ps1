@@ -1,2 +1,7 @@
-Remove-item -R -Force api/node_modules
-Remove-item -R -Force client/node_modules
+pushd api
+  Remove-item -R -Force node_modules
+popd
+
+pushd client
+  Remove-item -R -Force node_modules
+popd
