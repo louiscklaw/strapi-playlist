@@ -1,0 +1,42 @@
+{
+  "collectionName": "videos",
+  "info": {
+    "name": "video",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "video_url": {
+      "type": "string"
+    },
+    "provider_name": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "author_url": {
+      "type": "string"
+    },
+    "thumbnail_url": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "html": {
+      "type": "string"
+    },
+    "uploaded_at": {
+      "type": "string"
+    }
+  }
+}

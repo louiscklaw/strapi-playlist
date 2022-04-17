@@ -1,0 +1,36 @@
+{
+  "collectionName": "logins",
+  "info": {
+    "name": "login",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "identification": {
+      "type": "string"
+    },
+    "password_digest": {
+      "type": "string"
+    },
+    "oauth2_token": {
+      "type": "string"
+    },
+    "uid": {
+      "type": "string"
+    },
+    "single_use_oauth2_token": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "integer"
+    },
+    "provider": {
+      "type": "string"
+    }
+  }
+}

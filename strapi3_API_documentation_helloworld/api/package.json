@@ -1,0 +1,43 @@
+{
+  "name": "app",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^6.1.2",
+    "strapi-provider-email-mailtrap": "^3.5.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "knex": "0.21.18",
+    "lodash": "^4.17.21",
+    "node-fetch": "^3.2.3",
+    "slugify": "^1.6.5",
+    "sqlite3": "5.0.0",
+    "strapi": "3.6.8",
+    "strapi-admin": "3.6.8",
+    "strapi-connector-bookshelf": "3.6.8",
+    "strapi-plugin-content-manager": "3.6.8",
+    "strapi-plugin-content-type-builder": "3.6.8",
+    "strapi-plugin-documentation": "^3.6.8",
+    "strapi-plugin-email": "3.6.8",
+    "strapi-plugin-graphql": "^3.6.8",
+    "strapi-plugin-i18n": "3.6.8",
+    "strapi-plugin-upload": "3.6.8",
+    "strapi-plugin-users-permissions": "3.6.8",
+    "strapi-utils": "3.6.8"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "75cdef90-f56f-42c9-b806-9d258bc16a52"
+  },
+  "license": "MIT"
+}

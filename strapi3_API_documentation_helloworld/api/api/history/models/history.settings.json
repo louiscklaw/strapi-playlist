@@ -1,0 +1,27 @@
+{
+  "collectionName": "histories",
+  "info": {
+    "name": "history",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "message": {
+      "type": "text"
+    },
+    "raw_json": {
+      "type": "json"
+    },
+    "raw_result": {
+      "type": "json"
+    },
+    "raw_params": {
+      "type": "json"
+    }
+  }
+}

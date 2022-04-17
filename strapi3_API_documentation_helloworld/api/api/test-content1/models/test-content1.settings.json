@@ -1,0 +1,18 @@
+{
+  "collectionName": "test_content_1_s",
+  "info": {
+    "name": "test-content1",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

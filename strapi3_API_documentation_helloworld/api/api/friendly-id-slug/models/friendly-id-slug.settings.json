@@ -1,0 +1,27 @@
+{
+  "collectionName": "friendly_id_slugs",
+  "info": {
+    "name": "friendly_id_slug",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "slug": {
+      "type": "string"
+    },
+    "sluggable_id": {
+      "type": "integer"
+    },
+    "sluggable_type": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    }
+  }
+}
