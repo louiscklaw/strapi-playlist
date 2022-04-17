@@ -12,3 +12,5 @@ yarn add --ignore-engines strapi-plugin-graphql
 # yarn add --ignore-engines strapi-plugin-sitemap
 
 yarn --ignore-engines strapi admin:reset-user-password --email=helloworld@gmail.com --password=Aa1234567
+
+yarn add @faker-js/faker --dev
