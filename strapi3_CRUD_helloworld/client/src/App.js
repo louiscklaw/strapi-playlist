@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-import TestSendEmail from "src/components/TestSendEmail";
+// import TestSendEmail from "src/components/TestSendEmail";
 
 import axios from "axios";
 import React from "react";
@@ -95,8 +95,8 @@ function App() {
     console.log("onCreateClick");
     axios
       .post(
-        "http://localhost:1337/api/articles",
-        { data: { title: test_data } },
+        "http://localhost:1337/articles",
+        { title: test_data },
         { headers: { Authorization: `Bearer ${jwt_token}` } }
       )
       .then((response) => {
@@ -109,7 +109,7 @@ function App() {
   const onReadClick = () => {
     console.log("onReadClick");
     axios
-      .get(`http://localhost:1337/api/articles/${id_to_read}`, {
+      .get(`http://localhost:1337/articles/${id_to_read}`, {
         Authorization: `Bearer ${jwt_token}`,
       })
       .then((response) => {
@@ -123,8 +123,8 @@ function App() {
     console.log("onUpdateClick");
     axios
       .put(
-        `http://localhost:1337/api/articles/${id_to_put}`,
-        { data: { title: title_to_put } },
+        `http://localhost:1337/articles/${id_to_put}`,
+        { title: title_to_put },
         { Authorization: `Bearer ${jwt_token}` }
       )
       .then((response) => {
@@ -137,7 +137,7 @@ function App() {
   const onDeleteClick = () => {
     console.log("onDeleteClick");
     axios
-      .delete(`http://localhost:1337/api/articles/${id_to_delete}`, {
+      .delete(`http://localhost:1337/articles/${id_to_delete}`, {
         Authorization: `Bearer ${jwt_token}`,
       })
       .then((response) => {
@@ -151,7 +151,7 @@ function App() {
   const onListClick = () => {
     console.log("onListClick");
     axios
-      .get(`http://localhost:1337/api/articles`, {
+      .get(`http://localhost:1337/articles`, {
         Authorization: `Bearer ${jwt_token}`,
       })
       .then((response) => {
@@ -259,19 +259,35 @@ function App() {
           </div>
         </div>
         <div>
-          <input type="text" onChange={(e) => setIdToRead(e.target.value)} />
+          <input
+            type="text"
+            onChange={(e) => setIdToRead(e.target.value)}
+            placeholder="id"
+          />
           <button onClick={(e) => onReadClick(e)}>read</button>
           <pre>{read_response}</pre>
         </div>
         <div>
-          <input type="text" onChange={(e) => setIdToput(e.target.value)} />
-          <input type="text" onChange={(e) => setTitleToPut(e.target.value)} />
+          <input
+            type="text"
+            onChange={(e) => setIdToput(e.target.value)}
+            placeholder="id"
+          />
+          <input
+            type="text"
+            onChange={(e) => setTitleToPut(e.target.value)}
+            placeholder="title"
+          />
 
           <button onClick={(e) => onUpdateClick(e)}>update</button>
           <pre>{put_response}</pre>
         </div>
         <div>
-          <input type="text" onChange={(e) => setIdToDelete(e.target.value)} />
+          <input
+            type="text"
+            onChange={(e) => setIdToDelete(e.target.value)}
+            placeholder="id"
+          />
 
           <button onClick={(e) => onDeleteClick(e)}>delete</button>
           <pre>{delete_response}</pre>
@@ -282,7 +298,7 @@ function App() {
           <pre>{list_response}</pre>
         </div>
       </div>
-      <TestSendEmail />
+      {/* <TestSendEmail /> */}
     </div>
   );
 }
