@@ -8,7 +8,7 @@
 yarn add --ignore-engines strapi-plugin-sentry
 yarn add --ignore-engines strapi-plugin-graphql
 
-yarn add --ignore-engines strapi-plugin-wysiwsg-react-md-editor
-yarn add --ignore-engines strapi-plugin-sitemap
+# yarn add --ignore-engines strapi-plugin-wysiwsg-react-md-editor
+# yarn add --ignore-engines strapi-plugin-sitemap
 
 yarn --ignore-engines strapi admin:reset-user-password --email=helloworld@gmail.com --password=Aa1234567
