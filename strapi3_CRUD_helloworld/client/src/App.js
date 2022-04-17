@@ -1,6 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 
+import TestSendEmail from "src/components/TestSendEmail";
+
 import axios from "axios";
 import React from "react";
 
@@ -280,6 +282,7 @@ function App() {
           <pre>{list_response}</pre>
         </div>
       </div>
+      <TestSendEmail />
     </div>
   );
 }

@@ -3724,6 +3724,11 @@ dotenv@8.2.0:
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
   integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
 
+dotenv@^16.0.0:
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.0.tgz#c619001253be89ebb638d027b609c75c26e47411"
+  integrity sha512-qD9WU0MPM4SWLPJy/r2Be+2WgQj8plChsyrCNQzW/0WjvcJQiKQJ9mH3ZgB3fxbUUxgc/11ZJ0Fi5KiimWGz2Q==
+
 dottie@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/dottie/-/dottie-2.0.2.tgz#cc91c0726ce3a054ebf11c55fbc92a7f266dd154"
@@ -7062,6 +7067,11 @@ nodemailer-shared@1.1.0:
   dependencies:
     nodemailer-fetch "1.6.0"
 
+nodemailer@^6.4.8:
+  version "6.7.3"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.7.3.tgz#b73f9a81b9c8fa8acb4ea14b608f5e725ea8e018"
+  integrity sha512-KUdDsspqx89sD4UUyUKzdlUOper3hRkDVkrKh/89G+d9WKsU5ox51NWS4tB1XR5dPUdR4SP0E3molyEfOvSa3g==
+
 "nopt@2 || 3":
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-3.0.6.tgz#c6465dbf08abcd4db359317f79ac68a646b28ff9"
@@ -9934,6 +9944,13 @@ strapi-plugin-users-permissions@3.6.8:
     strapi-helper-plugin "3.6.8"
     strapi-utils "3.6.8"
     uuid "^3.1.0"
+
+strapi-provider-email-mailtrap@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/strapi-provider-email-mailtrap/-/strapi-provider-email-mailtrap-3.5.0.tgz#1daf8f29d8a730a0c7462e112cd9568b435dc1a1"
+  integrity sha512-ntnhKWPO6GgH41BkDvsk11BkI/xt5hH5MnHExiScrHyui/IRQK+f6XJRjRoglEumwD47G19oC2LBYl5BEtf8gg==
+  dependencies:
+    nodemailer "^6.4.8"
 
 strapi-provider-email-sendmail@3.6.8:
   version "3.6.8"

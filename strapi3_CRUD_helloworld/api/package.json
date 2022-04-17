@@ -10,10 +10,13 @@
     "strapi": "strapi"
   },
   "devDependencies": {
-    "@faker-js/faker": "^6.1.2"
+    "@faker-js/faker": "^6.1.2",
+    "strapi-provider-email-mailtrap": "^3.5.0"
   },
   "dependencies": {
+    "dotenv": "^16.0.0",
     "knex": "0.21.18",
+    "lodash": "^4.17.21",
     "node-fetch": "^3.2.3",
     "sqlite3": "5.0.0",
     "strapi": "3.6.8",

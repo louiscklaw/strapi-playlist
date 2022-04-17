@@ -4,10 +4,10 @@ npx kill-port 1337
 
 yarn --ignore-engines --dev
 
-remove-item -R -Force .cache
-remove-item -R -Force .tmp
-remove-item -R -Force build
-timeout 3
+# remove-item -R -Force .cache
+# remove-item -R -Force .tmp
+# remove-item -R -Force build
+# yarn --ignore-engines build
+timeout 1
 
-yarn --ignore-engines build
 yarn --ignore-engines develop

@@ -2,6 +2,14 @@
   "routes": [
     {
       "method": "GET",
+      "path": "/restaurants/test_email",
+      "handler": "restaurant.testEmail",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/restaurants",
       "handler": "restaurant.find",
       "config": {
