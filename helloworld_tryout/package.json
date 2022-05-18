@@ -8,7 +8,10 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "seed": "node scripts/seed.js"
+    "seed": "node scripts/seed.js",
+    "dev": "yarn --dev && yarn develop",
+    "gitUpdate": "git add . && git commit -m\"update helloworld_tryout,\" && git pull && git push",
+    "gitSync": "git fetch --all && git pull "
   },
   "devDependencies": {
     "unzip-stream": "^0.3.1",
