@@ -11,7 +11,8 @@
     "seed": "node scripts/seed.js",
     "dev": "yarn --dev && yarn develop",
     "gitUpdate": "git add . && git commit -m\"update strapi3-helloworld-tryout,\" && git pull && git push",
-    "gitSync": "git fetch --all && git pull "
+    "gitSync": "git fetch --all && git pull ",
+    "trim": "rm -rf node_modules .cache build .tmp .strapi-updater.json || true"
   },
   "devDependencies": {
     "@faker-js/faker": "^6.1.2"
