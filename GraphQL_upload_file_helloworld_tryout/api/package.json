@@ -16,7 +16,7 @@
     "@strapi/plugin-i18n": "4.1.5",
     "@strapi/plugin-users-permissions": "4.1.5",
     "@strapi/provider-email-nodemailer": "^4.1.7",
-    "@strapi/strapi": "4.1.5",
+    "@strapi/strapi": "4.1.9",
     "http-server": "^14.1.0",
     "nodemailer-ntlm-auth": "^1.0.1",
     "sqlite3": "5.0.2"
