@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "receipts",
+  "info": {
+    "singularName": "receipt",
+    "pluralName": "receipts",
+    "displayName": "receipt",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "amount": {
+      "type": "decimal"
+    },
+    "sender": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "receipts"
+    },
+    "recipient": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "receipts"
+    }
+  }
+}
