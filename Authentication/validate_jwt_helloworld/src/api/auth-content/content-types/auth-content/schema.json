@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "auth_contents",
+  "info": {
+    "singularName": "auth-content",
+    "pluralName": "auth-contents",
+    "displayName": "auth_content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "test_text": {
+      "type": "string"
+    }
+  }
+}

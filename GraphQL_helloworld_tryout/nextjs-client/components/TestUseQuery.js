@@ -1,7 +1,7 @@
 import React from "react";
 import { gql, useQuery } from "@apollo/client";
 
-const EXCHANGE_RATES = gql`
+const RESTAURANT_QUERY = gql`
   query Restaurants {
     restaurants {
       data {
@@ -16,7 +16,7 @@ const EXCHANGE_RATES = gql`
 
 export default () => {
   let [use_query_result, setUseQueryResult] = React.useState();
-  const { loading, error, data } = useQuery(EXCHANGE_RATES);
+  const { loading, error, data } = useQuery(RESTAURANT_QUERY);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;

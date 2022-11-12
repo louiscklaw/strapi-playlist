@@ -1,12 +1,15 @@
 import { ApolloClient, InMemoryCache, useMutation, gql } from "@apollo/client";
 
 const EXCHANGE_RATES = gql`
-  mutation {
-    updateTestContent1(id: "1", data: { title: "HellofromGQL" }) {
+  mutation update_user_profile {
+    updateUserProfile(
+      id: 2
+      data: { description: "test update user profile" }
+    ) {
       data {
         id
         attributes {
-          title
+          description
         }
       }
     }
